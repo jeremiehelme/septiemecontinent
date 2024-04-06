@@ -1,0 +1,21 @@
+// square by default
+@mixin fit($width: 100, $height: 100, $position: relative) {
+  position: $position;
+  font-size: 0;
+
+  &::before {
+    display: block;
+    width: 100%;
+    padding-bottom: 0;
+    padding-bottom: calc(($height * 100) / $width) * 1%;
+    content: "";
+  }
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

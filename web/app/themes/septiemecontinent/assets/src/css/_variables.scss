@@ -1,0 +1,15 @@
+$ease_out_back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$ease_out_quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+body {
+  --background-color: #fff;
+  --text-color: #333;
+  --accent-color: #7cd755;
+  --vspace: 80px;
+  --hspace: 20px;
+
+  @media (max-width: 992px) {
+    --vspace: 40px;
+    --hspace: 15px; 
+  }
+}

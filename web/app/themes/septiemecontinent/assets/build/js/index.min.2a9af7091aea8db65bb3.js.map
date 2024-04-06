@@ -1,0 +1,1 @@
+{"version":3,"file":"./js/index.min.2a9af7091aea8db65bb3.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAG,CAAC,aAAa,CAAC,C","sources":["webpack://wp-theme/wp-theme/wp-theme/wp-theme/wp-theme/wp-theme/wp-theme/wp-theme/wp-theme/./assets/src/js/index.js"],"sourcesContent":["console.log('hello world');  "],"names":["console","log"],"sourceRoot":""}

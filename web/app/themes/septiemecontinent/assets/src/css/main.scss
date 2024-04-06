@@ -1,0 +1,53 @@
+@import "variables";
+@import "normalize";
+@import "fonts";
+
+// MIXINS
+@import "mixins/fit";
+@import "mixins/font";
+@import "mixins/breakpoints";
+
+// COMPONENTS
+@import "components/headings";
+@import "components/button"; 
+@import "components/header"; 
+@import "components/footer";
+
+// BLOCKS
+// @import "blocks/homeHero";
+ 
+// PAGES
+// @import "pages/home";
+
+* {
+  box-sizing: border-box;
+}
+html {
+    font-family: 'Montserrat' sans-serif;
+    font-size: 16px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hspace {
+  padding-left: var(--hspace);
+  padding-right: var(--hspace);
+}
+.wrapper {
+  width: 900px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

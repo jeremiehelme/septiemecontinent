@@ -1,0 +1,41 @@
+//Adds font-size in rem & px
+//Value passed should be the expected px size
+//Default value 12 - can be customized to fit project
+@mixin font-size($sizeValue: 12) {
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.0625 * $sizeValue) + rem;
+}
+
+//Adds line-height in rem & px
+//Value passed should be the expected px size
+//Default value 20 - can be customized to fit project
+@mixin line-height($heightValue: 20) {
+  line-height: $heightValue + px; //fallback for old browsers
+  line-height: (0.0625 * $heightValue) + rem;
+}
+
+//Rhythm adds font-size and line-height in rem with a px fallback
+//Value passed should be the expected px size
+//Default values 12, 20 - can be customized to fit project
+@mixin rhythm($sizeValue: 12, $heightValue: 20) {
+  @include font-size($sizeValue);
+  @include line-height($heightValue);
+}
+
+@mixin fluid-font($minSize, $minWidth, $maxSize, $maxWidth) {
+  font-size: $minSize;
+
+  @media screen and (min-width: $minWidth) {
+    font-size: calc(
+      #{$minSize} + #{strip-units($maxSize - $minSize)} *
+        ((100vw - #{$minWidth}) / #{strip-units($maxWidth - $minWidth)})
+    );
+  }
+  @media screen and (min-width: $maxWidth) {
+    font-size: $maxSize;
+  }
+}
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}

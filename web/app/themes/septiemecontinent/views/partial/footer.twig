@@ -1,0 +1,8 @@
+{% block footer %}
+    <footer id="footer">
+        <div class="wrapper">
+            Copyright {{"now"|date('Y')}}
+        </div>
+    </footer>
+    {{ function('wp_footer') }}
+{% endblock %}

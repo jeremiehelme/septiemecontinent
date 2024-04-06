@@ -7,6 +7,11 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
+web/app/languages
+
+web/app/themes/septiemecontinent/wordpress
+web/app/themes/septiemecontinent/vendor
+web/app/themes/septiemecontinent/node_modules
 
 # WordPress
 web/wp
