@@ -1,0 +1,14 @@
+.postsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 66px;
+    grid-row-gap: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include respond-to('medium') {
+        grid-column-gap: 30px;
+        grid-row-gap: 40px;
+    }
+}

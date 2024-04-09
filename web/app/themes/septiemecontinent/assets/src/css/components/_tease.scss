@@ -1,0 +1,55 @@
+.tease {
+    max-width: 345px;
+
+    a {
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+            color: initial;
+
+            .tease-more {
+                color: var(--color-primary);
+            }
+            svg {
+                transform: translateX(10px);
+            }
+        }
+    }
+    &-image {
+        @include fit();
+        background: url(../img/default.webp) center;
+        background-size: cover;
+    }
+    &-title {
+        @include rhythm(18, 24);
+        color: var(--color-cerulean);
+        margin: 15px 0 0;
+    }
+    p {
+        @include rhythm(14, 20);
+        margin: 7px 0;
+        color: var(--text-color);
+    }
+    &-more {
+        display: block;
+        margin-top: 15px;
+        @include rhythm(12, 15);
+        text-transform: uppercase;
+        color: var(--color-cerulean);
+        font-weight: 800;
+        transition: color .3s;
+
+        svg {
+            width: 19px;
+            height: 8px;
+            margin-left: 12px;
+            transition: transform 0.3s;
+            transform: translateX(0);
+
+            path {
+                fill: currentColor;
+            }
+        }
+    }
+}

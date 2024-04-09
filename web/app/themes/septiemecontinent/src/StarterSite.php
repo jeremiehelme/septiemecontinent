@@ -15,6 +15,7 @@ class StarterSite extends Site
 		add_action('after_setup_theme', array($this, 'add_image_sizes'));
 		add_action('init', array($this, 'register_post_types'));
 		add_action('init', array($this, 'register_taxonomies'));
+		add_filter( 'acf/settings/save_json', array($this, 'my_acf_json_save_point') );
 
 		// rewrite rules
 		// add_action('init', array($this, 'custom_rewrite_rule'), 10, 0);
@@ -177,7 +178,11 @@ class StarterSite extends Site
 		// width x height x crop
 		$image_sizes = [
 			'9999x567x0',
-			'392x240x1'
+			'392x240x1',
+			'465x9999x0',
+			'440x9999x0',
+			'9999x360x0',
+			'345x345x1',
 		];
 
 		foreach ($image_sizes as $image_size) {
@@ -241,9 +246,16 @@ class StarterSite extends Site
 
 	public function get_attachment_image($attachment_id, $size = 'thumbnail', $icon = false)
 	{
+		if (is_array($attachment_id)) {
+			$attachment_id = $attachment_id['ID'];
+		}
 		if (is_object($attachment_id)) {
 			$attachment_id = $attachment_id->ID;
 		}
 		return wp_get_attachment_image($attachment_id, $size, $icon);
+	}
+
+	public function my_acf_json_save_point( $path ) {
+		return get_stylesheet_directory() . '/acf-json';
 	}
 }

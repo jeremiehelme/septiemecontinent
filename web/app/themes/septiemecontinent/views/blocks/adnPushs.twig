@@ -1,11 +1,11 @@
 <div class="b-pushs hspace">
     <div class="wrapper">
         {% for push in posts %}
-            <div class="c-push">
+            <a class="c-push" href={{push.permalink}}>
                 <h3 class="c-push-title">{{push.post_title}}</h3>
                 <div class="c-push-image">{{push.thumbnail}}</div>
                 <div class="c-push-text">{{svg('arrow')}}{{push.excerpt}}</div>
-            </div>
+            </a>
         {% endfor %}
     </div>
 </div>

@@ -1,45 +1,148 @@
 .b-textImage {
-    padding-top: 30px;
-    padding-bottom: 30px;
     background: var(--color-polar);
+    overflow: hidden;
 
     .wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        @include respond-to('medium') {
+        @include respond-to('small') {
             flex-direction: column-reverse;
         }
     }
-    .b-textImage-image {
-        width: 50%;
-        margin-bottom: 0;
+    &-image {
+        font-size: 0;
 
-        @include respond-to('medium') {
+        @include respond-to('small') {
             width: 100%;
+            align-self: flex-start;
+            margin-bottom: 30px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
     }
     .b-textImage-text {
-        width: 50%;
+        flex: 1;
         padding-right: 63px;
 
-        @include respond-to('medium') {
+        &-title {
+            margin: 0 0 10px;
+            @include rhythm(22, 28);
+            color: var(--color-cerulean);
+        }
+        p {
+            @include rhythm(14, 20);
+            margin: 10px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .button {
+            margin-top: 20px;
+        }
+        @include respond-to('small') {
             width: 100%;
-            padding: 0;
+            padding: 0 var(--hspace) !important;
         }
     }
+    @include respond-to('small') {
+        padding-top: 0 !important;
+        padding-bottom: 40px !important;
+
+        &.hspace {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    // Order
     &[data-order='reverse'] {
         .wrapper {
             flex-direction: row-reverse;
 
-            @include respond-to('medium') {
+            @include respond-to('small') {
                 flex-direction: column-reverse;
             }
         }
         .b-textImage-text {
             padding-right: 0;
             padding-left: 63px;
+
+            @include respond-to('small') {
+                padding: 0;
+            }
+        }
+    }
+
+    // Margin
+    &[data-margin='small'] {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &[data-margin='large'] {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    // Background
+    &[data-background='polar'] {
+        background: var(--color-polar);
+    }
+    &[data-background='white'] {
+        background: #fff;
+    }
+
+    // Image size
+    &[data-imagesize='banner'] {
+        &.hspace {
+            padding-right: 0;
+        }
+        .b-textImage-image {
+            width: 50%;
+            height: 360px;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50vw;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include respond-to('small') {
+                width: 100%;
+                height: auto;
+
+                img {
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    &[data-imagesize='465'] {
+        .wrapper {
+            width: 930px;
+        }
+        .b-textImage-image {
+            flex: 0 1 50%;
+            max-width: 465px;
+        }
+    }
+    &[data-imagesize='440'] {
+        .wrapper {
+            width: 1000px;
+        }
+        .b-textImage-image {
+            flex: 0 1 50%;
+            max-width: 440px;
         }
     }
 }

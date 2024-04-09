@@ -4,31 +4,10 @@
 
     {% include('blocks/homeHero.twig') with {'fields':hero_data} %}
     {% include('blocks/adnPushs.twig') with {'posts':adn_posts} %}
-
-    <div class="b-textImage hspace">
-        <div class="wrapper" data-width="930">
-            <div class="b-textImage-text">
-                <h1>Test</h1>
-                <p>Lorem ipsum</p>
-                <a href="#" class="button">Découvrir</a>
-            </div>
-            <div class="b-textImage-image">
-                <img src="https://placehold.co/465x465/EEE/31343C" alt="Placeholder">
-            </div>
-        </div>
-    </div>
-
-    <div class="b-textImage hspace" data-order="reverse">
-        <div class="wrapper" data-width="930">
-            <div class="b-textImage-text">
-                <h1>Test</h1>
-                <p>Lorem ipsum</p>
-                <a href="#" class="button">Découvrir</a>
-            </div>
-            <div class="b-textImage-image">
-                <img src="https://placehold.co/465x465/EEE/31343C" alt="Placeholder">
-            </div>
-        </div>
-    </div>
+    {% include('blocks/textImage.twig') with {'fields':text_image} %}
+    {% include('blocks/stats.twig') with {'stats':stats} %}
+    {% include('blocks/textImage.twig') with {'fields':text_image_2} %}
+    {% include('blocks/textImage.twig') with {'fields':text_image_3} %}
+    {% include('blocks/latestPosts.twig') with {'posts':latest_posts} %}
 
 {% endblock %}

@@ -1,0 +1,28 @@
+{#
+order : classic, reverse
+background : polar, white
+margin : none, medium, large
+imagesize : 440, 465, banner
+#}
+<div class="b-textImage hspace" data-order="{{fields.order|default('classic')}}" data-background="{{fields.background|default('polar')}}" data-margin="{{fields.margin|default('small')}}" data-imagesize="{{fields.imagesize|default('440')}}">
+    <div class="wrapper" data-width="930">
+        <div class="b-textImage-text">
+            <h3 class="b-textImage-text-title">{{fields.title}}</h1>
+            {{fields.text}}
+            {% if fields.button is not empty %}
+                <a href="{{fields.button.url}}" class="button">{{fields.button.title}}</a>
+            {% endif %}
+        </div>
+        <div class="b-textImage-image">
+            {% if fields.imagesize is not empty %}
+                {% if fields.imagesize == 'banner' %}
+                    {{ get_attachment_image(fields.image, '9999x360x0') }}
+                {% else %}
+                    {{ get_attachment_image(fields.image, "#{fields.imagesize}x9999x0") }}
+                {% endif %}
+            {% else %}
+                {{ get_attachment_image(fields.image, '440x9999x0') }}
+            {% endif %}
+        </div>
+    </div>
+</div>

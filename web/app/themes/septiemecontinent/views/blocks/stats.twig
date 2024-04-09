@@ -1,0 +1,13 @@
+<div class="b-stats hspace">
+    <div class="wrapper">
+        <ul>
+            {% for stat in stats %}
+                <li>
+                    <div class="b-stats-icon">{{ get_attachment_image(stat.icon, 'full') }}</div>
+                    <div class="b-stats-title">{{ stat.title }}</div>
+                    <div class="b-stats-text">{{ stat.text|nl2br }}</div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.b-latestPosts {
+    padding-top: 45px;
+    background: var(--color-polar);
+
+    &-title {
+        color: var(--color-cerulean);
+    }
+    .postsList {
+        padding: 0 var(--hspace) 35px;
+    }
+
+    @include respond-to('medium') {
+        grid-column-gap: 20px;
+
+        .postsList {
+            overflow: auto;
+        }
+        article {
+            min-width: 300px;
+        }
+    }
+}

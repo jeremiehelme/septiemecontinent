@@ -10,17 +10,24 @@
 // COMPONENTS
 @import "components/headings";
 @import "components/button";
-@import "components/header"; 
-@import "components/footer"; 
-@import "components/navigation"; 
-@import "components/push"; 
+@import "components/header";
+@import "components/footer";
+@import "components/navigation";
+@import "components/pageHeader";
+@import "components/pagination";
+@import "components/postsList";
+@import "components/push";
+@import "components/tease";
 
 // BLOCKS
 @import "blocks/homeHero";
+@import "blocks/latestPosts";
 @import "blocks/pushs";
+@import "blocks/stats";
 @import "blocks/textImage";
  
 // PAGES
+@import "pages/blog";
 @import "pages/home";
 
 * {
@@ -29,11 +36,22 @@
 html { 
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    color: var(--text-color);
 }
 body {
   @include respond-from(medium) {
     overflow-x: hidden;
   }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: var(--text-color);
+  background: var(--color-secondary);
+}
+
+::selection {
+  color: var(--text-color);
+  background: var(--color-secondary);
 }
 
 a {
@@ -59,8 +77,4 @@ img {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-
-  &[data-width='930'] {
-    width: 930px;
-  }
 }

@@ -20,9 +20,9 @@ $colors: (
   }
 
   --vspace: 80px;
-  --hspace: 25px;
+  --hspace: 30px;
 
-  @media (max-width: 992px) { 
+  @media (max-width: 767px) { 
     --vspace: 40px; 
     --hspace: 20px;
   }

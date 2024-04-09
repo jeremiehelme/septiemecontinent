@@ -1,16 +1,27 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<div class="article-title">
-					<h1>{{post.title}}</h1>
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		<header class="c-pageHeader" data-background="{{post.page_header.background}}">
+			<div class="wrapper">
+				<div class="c-pageHeader-image">
+					{{ get_attachment_image(post.thumbnail_id, 'full')}}
 				</div>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
-		</article>
-	</div><!-- /content-wrapper -->
+				<div class="c-pageHeader-text">
+					<div class="c-pageHeader-text-pretitle"><span>{{post.page_header.pre_title}}</span></div>
+					<h1 class="c-pageHeader-text-title">
+						{% if post.page_header.title is not empty %}
+							{{post.page_header.title}}
+						{% else %}
+							{{post.title}}
+						{% endif %}
+					</h1>
+					{{post.page_header.texte}}
+				</div
+			</div>
+		</header>
+		<section class="article-content wrapper">
+			{{post.content}}
+		</section>
+	</article>
 {% endblock %}

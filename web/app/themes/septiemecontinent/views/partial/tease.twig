@@ -1,9 +1,12 @@
 <article class="tease tease-{{post.type}}" id="tease-{{post.id}}">
-	{% block content %}
-		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{ post.excerpt }}</p>
-		{% if post.thumbnail %}
-			<img src="{{post.thumbnail.src}}" />
-		{% endif %}
-	{% endblock %}
+	<a href="{{post.link}}">
+		<div class="tease-image">
+			{% if post.thumbnail.src %}
+				{{get_attachment_image(post.thumbnail, '345x345x1')}}
+			{% endif %}
+		</div>
+		<h3 class="tease-title">{{ post.title }}</h2>
+		<p>{{ post.excerpt({ words:20, read_more: "" }) }}</p>
+		<span class="tease-more">{{__('Lire la suite', 'septiemecontinent')}}{{svg('arrow')}}</span>
+	</a>
 </article>

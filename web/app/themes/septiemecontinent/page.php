@@ -24,5 +24,6 @@
 $context = Timber::context();
 
 $timber_post     = Timber::get_post();
+$timber_post->page_header = get_field('page_header');
 $context['post'] = $timber_post;
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
