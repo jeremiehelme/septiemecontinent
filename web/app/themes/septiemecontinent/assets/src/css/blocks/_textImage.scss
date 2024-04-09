@@ -1,0 +1,45 @@
+.b-textImage {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: var(--color-polar);
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include respond-to('medium') {
+            flex-direction: column-reverse;
+        }
+    }
+    .b-textImage-image {
+        width: 50%;
+        margin-bottom: 0;
+
+        @include respond-to('medium') {
+            width: 100%;
+        }
+    }
+    .b-textImage-text {
+        width: 50%;
+        padding-right: 63px;
+
+        @include respond-to('medium') {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    &[data-order='reverse'] {
+        .wrapper {
+            flex-direction: row-reverse;
+
+            @include respond-to('medium') {
+                flex-direction: column-reverse;
+            }
+        }
+        .b-textImage-text {
+            padding-right: 0;
+            padding-left: 63px;
+        }
+    }
+}

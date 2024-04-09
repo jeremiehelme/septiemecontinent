@@ -1,7 +1,39 @@
 {% block footer %}
-    <footer id="footer">
-        <div class="wrapper">
-            Copyright {{"now"|date('Y')}}
+    <footer class="footer">
+        <div class="footer-social hspace">
+            <div class="wrapper">
+                {{ __("Suivez-nous", 'septiemecontinent') }}
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/7eContinent/" target="_blank" rel="noopener">{{ svg('RS/insta') }}</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/7eContinent/" target="_blank" rel="noopener">{{ svg('RS/X') }}</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/7eContinent/" target="_blank" rel="noopener">{{ svg('RS/FB') }}</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/7eContinent/" target="_blank" rel="noopener">{{ svg('RS/linkedin') }}</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/7eContinent/" target="_blank" rel="noopener">{{ svg('RS/YT') }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-menu hspace">
+            <div class="wrapper">
+                {{ svg('logo') }}
+                <nav class="footer-menu-nav" role="navigation">
+                    {% include "partial/menu.twig" with {'items': menu.get_items} %}
+                </nav>
+            </div>
+        </div>
+        <div class="footer-colophon hspace">
+            <div class="wrapper">
+                © {{"now"|date('Y')}} Expédition 7ème Continent, tous droits réservés
+            </div>
         </div>
     </footer>
     {{ function('wp_footer') }}

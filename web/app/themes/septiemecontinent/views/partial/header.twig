@@ -1,12 +1,31 @@
-<header class="header" >
+<header class="header hspace" data-controller="menu" data-menu-open-value="false">
     {% block header %}
-        <div class="wrapper">
-            <h1 class="hdr-logo" role="banner">
-                <a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-            </h1>
-            <nav id="nav-main" class="nav-main" role="navigation">
+        <div class="wrapper">            
+            {% if is_front_page %}
+                <h1 class="header-logo" role="banner" title="{{site.name}}">
+            {% else %}
+                <a href="{{site.url}}" title="{{site.name}}" rel="home" class="header-logo">
+            {% endif %}
+
+                {{ svg('logo') }}
+
+            {% if is_front_page %}
+                </h1>
+            {% else %}
+                </a>
+            {% endif %}
+
+            <button class='mainNav-toggle' data-action="click->menu#toggle">
+				{{ svg('menu') }}
+			</button>
+
+            <nav class="mainNav" role="navigation" data-action="click->menu#blur">
                 {% include "partial/menu.twig" with {'items': menu.get_items} %}
-            </nav><!-- #nav -->
+                <button class='mainNav-close' data-action="click->menu#close">
+                    {{ svg('close') }}
+                    Fermer
+                </button>
+            </nav>
         </div>
     {% endblock %}
 </header>

@@ -1,3 +1,135 @@
 .footer {
-  
+  @include rhythm(14, 18);
+
+  &-social {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: var(--color-grey);
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+
+      li {
+        margin-left: 35px;
+
+        @include respond-to('medium') {
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+      a {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--color-cerulean);
+        justify-content: center;
+        align-items: center;
+      }
+      @include respond-to('medium') {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+      }
+    }
+    @include respond-to('medium') {
+      text-align: center;
+    }
+  }
+  &-menu {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-nav {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      > ul {
+        display: flex;
+
+        > li {
+          width: fit-content;
+          max-width: 200px;
+          margin-left: 60px;
+
+          > a {
+            position: relative;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 7px;
+              left: -27px;
+              width: 17px;
+              height: 2px;
+              background: var(--color-secondary);
+              border-radius: 10px;
+            }
+            @include respond-to('medium') {
+              display: block;
+              padding: 10px 0;
+
+              &::before {
+                top: 17px;
+              }
+            }
+          }
+          > ul li {
+            margin-top: 10px;
+
+            a::before {
+              content: '-\00a0';
+            }
+            @include respond-to('medium') {
+              margin-top: 0;
+
+              a {
+                display: block;
+                padding: 10px 0;
+              }
+            }
+          }
+          @include respond-to('medium') {
+            margin-left: 20px;
+            margin-top: 20px;
+          }
+        }
+        @include respond-to('medium') {
+          display: block;
+        }
+      }
+    }
+    @include respond-to('medium') {
+      .svg-logo {
+        display: none;
+      }
+    }
+  }
+  &-colophon {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: rgba(var(--color-cerulean-rgb), 0.06);
+
+    @include respond-to('medium') {
+      text-align: center;
+    }
+  }
 }

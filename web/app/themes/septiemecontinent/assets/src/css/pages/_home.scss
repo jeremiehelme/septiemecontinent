@@ -1,0 +1,19 @@
+.home {
+    @include respond-from('medium') {
+        .header {
+            position: absolute;
+            width: 100%;
+            background: transparent;
+
+            .svg-logo path {
+                fill: #fff;
+            }
+            .mainNav-toggle path {
+                fill: #fff;
+            }
+            .mainNav > ul > li > a {
+                color: #fff;
+            }
+        }
+    }
+}

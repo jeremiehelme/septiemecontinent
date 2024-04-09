@@ -129,6 +129,7 @@ class StarterSite extends Site
 		);
 
 		add_theme_support('menus');
+		add_post_type_support( 'page', 'excerpt' );
 	}
 
 	public function textdomain()
@@ -175,7 +176,8 @@ class StarterSite extends Site
 	{
 		// width x height x crop
 		$image_sizes = [
-			// '1920x1080x0'
+			'9999x567x0',
+			'392x240x1'
 		];
 
 		foreach ($image_sizes as $image_size) {
@@ -213,8 +215,8 @@ class StarterSite extends Site
 	public function get_inline_svg($filename)
 	{
 		$html = '';
-		$file = get_template_directory_uri() . '/assets/static/img/svg/' . $filename . '.svg';
-		$content = file_get_contents($file);
+		$file = get_template_directory_uri() . '/assets/build/img/svg/' . $filename . '.svg';
+		$content = @file_get_contents($file);
 		$className = 'svg-%name';
 
 		if ($content === FALSE) {

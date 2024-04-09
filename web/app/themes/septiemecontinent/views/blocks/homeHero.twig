@@ -1,0 +1,15 @@
+<div class="b-homeHero hspace">
+    <div class="wrapper">
+        <div class="b-homeHero-image">
+            {{ get_attachment_image(fields.image.ID, '9999x567x0') }}
+        </div>
+        <div class="b-homeHero-text">
+            <h2 class="b-homeHero-text-title">
+                {{fields.title}}
+            </h2>
+            {% if fields.button is not empty %}
+                <a href="{{fields.button.url}}" class="button">{{fields.button.title}}</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

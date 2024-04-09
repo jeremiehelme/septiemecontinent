@@ -9,22 +9,31 @@
 
 // COMPONENTS
 @import "components/headings";
-@import "components/button"; 
+@import "components/button";
 @import "components/header"; 
-@import "components/footer";
+@import "components/footer"; 
+@import "components/navigation"; 
+@import "components/push"; 
 
 // BLOCKS
-// @import "blocks/homeHero";
+@import "blocks/homeHero";
+@import "blocks/pushs";
+@import "blocks/textImage";
  
 // PAGES
-// @import "pages/home";
+@import "pages/home";
 
 * {
   box-sizing: border-box;
 }
-html {
-    font-family: 'Montserrat' sans-serif;
-    font-size: 16px;
+html { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+body {
+  @include respond-from(medium) {
+    overflow-x: hidden;
+  }
 }
 
 a {
@@ -32,7 +41,7 @@ a {
   text-decoration: underline;
 
   &:hover {
-    color: var(--accent-color);
+    color: var(--color-cerulean);
   }
 }
 
@@ -46,8 +55,12 @@ img {
   padding-right: var(--hspace);
 }
 .wrapper {
-  width: 900px;
+  width: 1215px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+
+  &[data-width='930'] {
+    width: 930px;
+  }
 }

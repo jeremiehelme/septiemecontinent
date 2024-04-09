@@ -2,19 +2,33 @@
   display: inline-flex;
   align-items: center;
   overflow: hidden;
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
+  padding: 15px 25px;
+  background-color: var(--accent-color);
+  color: var(--text-color); 
+  font-weight: 700;
   text-decoration: none;
-  transition: background-color 0.2s, color 0.2s;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: background-color 0.3s, color 0.3s;
+  @include font-size(12px);
 
-  svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 4px;
+  &::after {
+    content: '';
+    display: inline-block; 
+    width: 19px;
+    height: 8px;
+    margin-left: 12px;
+    background: url(../img/svg/arrow.svg) no-repeat center center;
+    vertical-align: middle;
+    transform: translateX(0);
+    transition: transform 0.2s;
   }
   &:hover { 
     background-color: #fff;
-    color: #000;
+    color: var(--text-color);
+
+    &::after {
+      transform: translateX(5px);
+    }
   }
 }

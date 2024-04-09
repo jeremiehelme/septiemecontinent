@@ -1,0 +1,11 @@
+.b-pushs {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    overflow: auto;
+
+    .wrapper {
+        display: flex;
+        justify-content: stretch;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% include('blocks/homeHero.twig') with {'fields':hero_data} %}
+    {% include('blocks/adnPushs.twig') with {'posts':adn_posts} %}
+
+    <div class="b-textImage hspace">
+        <div class="wrapper" data-width="930">
+            <div class="b-textImage-text">
+                <h1>Test</h1>
+                <p>Lorem ipsum</p>
+                <a href="#" class="button">Découvrir</a>
+            </div>
+            <div class="b-textImage-image">
+                <img src="https://placehold.co/465x465/EEE/31343C" alt="Placeholder">
+            </div>
+        </div>
+    </div>
+
+    <div class="b-textImage hspace" data-order="reverse">
+        <div class="wrapper" data-width="930">
+            <div class="b-textImage-text">
+                <h1>Test</h1>
+                <p>Lorem ipsum</p>
+                <a href="#" class="button">Découvrir</a>
+            </div>
+            <div class="b-textImage-image">
+                <img src="https://placehold.co/465x465/EEE/31343C" alt="Placeholder">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

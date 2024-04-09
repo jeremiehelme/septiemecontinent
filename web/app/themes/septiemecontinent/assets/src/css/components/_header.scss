@@ -1,3 +1,27 @@
 .header {
-  
+  position: relative;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to('medium') {
+      display: block;
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
+  }
+  &-logo {
+    display: block;
+    width: fit-content;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+
+    @include respond-to('medium') {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }

@@ -1,15 +1,29 @@
 $ease_out_back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $ease_out_quart: cubic-bezier(0.165, 0.84, 0.44, 1);
 
-body {
-  --background-color: #fff;
-  --text-color: #333;
-  --accent-color: #7cd755;
-  --vspace: 80px;
-  --hspace: 20px;
+$colors: (
+  "primary": #073654,
+  "secondary": #57FFD2,
+  "polar": #E4F1FA,
+  "cerulean": #0071AE,
+  "grey": #F0F0F0
+);
 
-  @media (max-width: 992px) {
-    --vspace: 40px;
-    --hspace: 15px; 
+:root {
+  --background-color: #fff;
+  --text-color: #{map-get($colors, "primary")}; 
+  --accent-color: #{map-get($colors, "secondary")};
+
+  @each $color, $value in $colors {
+    --color-#{$color}: #{$value};
+    --color-#{$color}-rgb: #{red($value)}, #{green($value)}, #{blue($value)};
+  }
+
+  --vspace: 80px;
+  --hspace: 25px;
+
+  @media (max-width: 992px) { 
+    --vspace: 40px; 
+    --hspace: 20px;
   }
 }
