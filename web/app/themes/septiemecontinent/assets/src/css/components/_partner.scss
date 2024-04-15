@@ -1,0 +1,51 @@
+.partner {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #DBDBDB;
+    }
+    &-image {
+        display: flex;
+        flex: 0 0 170px;
+        height: 170px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-right: 34px;
+        background: #fff;
+    }
+    &-text {
+        &-title {
+            color: var(--color-cerulean);
+            margin: 0 0 5px;
+        }
+        &-content {
+            margin-bottom: 10px;
+
+            p {
+                margin: 0;
+            }
+        }
+        &-link {
+            @include rhythm(12, 15);
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--color-cerulean);
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            svg {
+                margin-left: 12px;
+
+                path {
+                    fill: currentColor;
+                }
+            }
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+}

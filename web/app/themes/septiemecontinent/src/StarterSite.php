@@ -1,5 +1,5 @@
 <?php
-
+include_once(__DIR__ . '/../config/constants.php');
 use Timber\Site;
 
 /**
@@ -15,7 +15,8 @@ class StarterSite extends Site
 		add_action('after_setup_theme', array($this, 'add_image_sizes'));
 		add_action('init', array($this, 'register_post_types'));
 		add_action('init', array($this, 'register_taxonomies'));
-		add_filter( 'acf/settings/save_json', array($this, 'my_acf_json_save_point') );
+		add_filter('acf/settings/save_json', array($this, 'my_acf_json_save_point'));
+		add_filter('acf/format_value/name=stats', array($this, 'stats_format_value'), 10, 3);
 
 		// rewrite rules
 		// add_action('init', array($this, 'custom_rewrite_rule'), 10, 0);
@@ -40,6 +41,13 @@ class StarterSite extends Site
 	 */
 	public function register_post_types()
 	{
+		register_post_type('partenaires', [
+				'labels'      => $this->get_custom_entity_labels('partenaire', 'partenaires', 'm'),
+				'public'      => true,
+				'has_archive' => true,
+				'menu_icon'   => 'dashicons-share-alt',
+				'supports'    => ['title', 'editor', 'thumbnail']
+		]);
 	}
 
 	/**
@@ -47,6 +55,10 @@ class StarterSite extends Site
 	 */
 	public function register_taxonomies()
 	{
+		register_taxonomy( 'type', 'partenaires', [
+			'labels'      => $this->get_custom_entity_labels('type', 'types', 'm'),
+			'hierarchical' => true
+		]);
 	}
 
 	public function add_theme_scripts()
@@ -185,6 +197,7 @@ class StarterSite extends Site
 			'345x345x1',
 			'769x9999x0',
 			'80x80x1',
+			'130x130x0',
 		];
 
 		foreach ($image_sizes as $image_size) {
@@ -259,5 +272,65 @@ class StarterSite extends Site
 
 	public function my_acf_json_save_point( $path ) {
 		return get_stylesheet_directory() . '/acf-json';
+	}
+
+	// Generate labels for register_post_type and register_taxonomy functions
+	public function get_custom_entity_labels($singular, $plural, $genre = 'm', $overwrite = array()) {
+		$un_une = "un".($genre=='f'?'e':'');
+		$tous_toutes = "tou".($genre=='f'?'te':'')."s";
+	 
+	 
+		if (in_array($singular[0], array('a', 'e', 'é', 'è', 'i', 'o', 'u'))) {
+			$le_la_l = "l'";
+		} else {
+			if ($genre == 'f') {
+				$le_la_l = "la ";
+			} else {
+				$le_la_l = "le ";
+			}
+		}
+	 
+	 
+		if ($genre == 'f') {
+			$nouveau_nouvelle_nouvel = "nouvelle";
+		} else {
+			if (in_array($singular[0], array('a', 'e', 'é', 'è', 'i', 'o', 'u'))) {
+				$nouveau_nouvelle_nouvel = "nouvel";
+			} else {
+				$nouveau_nouvelle_nouvel = "nouveau";
+			}
+		}
+	 
+	 
+		$labels = array(
+			'name' => ucfirst($plural),
+			'singular_name' => ucfirst($singular),
+			'menu_name' => ucfirst($plural),
+			'name_admin_bar' => "Ajouter ".$un_une." $singular",
+			'all_items' => ucfirst($tous_toutes)." les $plural",
+			'add_new' => 'Ajouter',
+			'add_new_item' => "Ajouter ".$un_une." $singular",
+			'edit_item' => "Modifier ".$le_la_l."$singular",
+			'new_item' => ucfirst($nouveau_nouvelle_nouvel)." $singular",
+			'view_item' => "Voir ".$le_la_l."$singular",
+			'search_items' => "Rechercher ".$un_une." $singular",
+			'not_found' => "Aucun".($genre=='f'?'e':'')." $singular trouvé",
+			'not_found_in_trash' => "Aucun".($genre=='f'?'e':'')." $singular dans la corbeille",
+			'parent_item_colon' => "Parent",
+		);
+		$labels = $overwrite + $labels;
+	 
+	 
+		return $labels;
+	}	 
+
+	public function stats_format_value($value, $post_id, $field) {
+		foreach ($value as $key => $stat) {
+			$title = $stat['title'];
+			$title = str_replace('[', '<small>', $title);
+			$title = str_replace(']', '</small>', $title);
+			$value[$key]['title'] = $title;
+		}
+		return $value;
 	}
 }

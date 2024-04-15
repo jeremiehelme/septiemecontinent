@@ -35,6 +35,26 @@ if ( is_day() ) {
 	array_unshift( $templates, 'archive-' . get_post_type() . '.twig' );
 }
 
+if (is_post_type_archive('partenaires') || is_tax('type')) {
+	$terms = get_terms([
+		'taxonomy'   => 'type',
+		'hide_empty' => false
+	]);
+	$links = [];
+	foreach ($terms as $term) {
+		$links[] = [
+			'title' => $term->name,
+			'link' => get_term_link($term)
+		];
+	}
+	$context['sidebar'] = Timber::get_sidebar('partial/sidebar.twig', [
+		'title' => __('Partenaires', 'septiemecontinent'),
+		'links' => $links
+	]);
+	$context['title'] = is_tax('type') ? single_term_title('', false) : __('Partenaires', 'septiemecontinent');
+	$templates = ['archive-partenaires.twig'];
+}
+
 $context['posts'] = Timber::get_posts();
 
 Timber::render( $templates, $context );

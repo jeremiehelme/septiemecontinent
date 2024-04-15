@@ -1,10 +1,9 @@
-<h3 class="b-latestPosts-title hspace">{{ title }}</h2>
-
+<h3>{{ title }}</h2>
 <ul>
-    {% for post in posts %}
+    {% for item in links %}
         <li>
-            <a href="{{ function('get_permalink', post.ID) }}">
-                {{ post.post_title }}
+            <a href="{{ item.link }}">
+                {{ item.title }}
             </a>
         </li>
     {% endfor %}

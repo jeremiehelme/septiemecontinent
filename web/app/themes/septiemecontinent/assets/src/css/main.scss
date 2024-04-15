@@ -15,8 +15,10 @@
 @import "components/navigation";
 @import "components/pageHeader";
 @import "components/pagination";
+@import "components/partner";
 @import "components/postsList";
 @import "components/push";
+@import "components/sidebar";
 @import "components/tease";
 
 // BLOCKS
@@ -27,10 +29,13 @@
 @import "blocks/stats";
 @import "blocks/team";
 @import "blocks/textImage";
+@import "blocks/themes";
  
 // PAGES
+@import "pages/404";
 @import "pages/blog";
 @import "pages/home";
+@import "pages/partenaires";
 @import "pages/single";
 
 * {
@@ -88,18 +93,16 @@ iframe {
 // layout with sidebar
 .content-wrapper.with-sidebar {
   display: flex;
-  padding: 100px var(--hspace);
-  width: 1215px;
-  max-width: 100%;
+  padding: 40px var(--hspace) 75px;
+  justify-content: center;
   margin: 0 auto;
-  // width: 1165px;
 
   .layout-main {
-    flex: 1;
+    flex: 0 1 755px;
   }
   .layout-sidebar {
     flex: 0 1 360px;
     min-width: 360px;
-    margin-left: 35px;
+    margin-left: 40px;
   }
 }

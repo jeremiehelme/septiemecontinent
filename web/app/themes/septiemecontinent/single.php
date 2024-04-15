@@ -19,9 +19,16 @@ $latest_posts = Timber::get_posts([
     'post_status' => 'publish',
     'posts_per_page' => 3
 ]);
+$links = [];
+foreach ($latest_posts as $post) {
+    $links[] = [
+        'title' => $post->title,
+        'link' => get_permalink($post)
+    ];
+}
 $context['sidebar'] = Timber::get_sidebar('partial/sidebar.twig', [
     'title' => __('Derniers articles', 'septiemecontinent'),
-    'posts' => $latest_posts
+    'links' => $latest_posts
 ]);
 
 if ( post_password_required( $timber_post->ID ) ) {

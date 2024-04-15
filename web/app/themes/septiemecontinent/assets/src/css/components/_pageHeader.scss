@@ -87,4 +87,24 @@
             margin: 10px 0;
         }
     }
+    &[data-background="primary"] {
+        background: var(--color-primary);
+    }
+    &[data-background="secondary"],
+    &[data-background="white"] {
+        .c-pageHeader-text {
+            &-title {
+                color: var(--color-cerulean);
+            }
+            p {
+                color: var(--color-primary);
+            }
+        }
+    }
+    &[data-background="secondary"] {
+        background: #cffff2;
+    }
+    &[data-background="white"] {
+        background: #fff;
+    }
 }

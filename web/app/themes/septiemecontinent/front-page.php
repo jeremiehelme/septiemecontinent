@@ -29,12 +29,6 @@ $context['text_image'] = $text_image;
 
 // Statistiques
 $stats = get_field('stats');
-foreach ($stats as $key => $stat) {
-    $title = $stat['title'];
-    $title = str_replace('[', '<small>', $title);
-    $title = str_replace(']', '</small>', $title);
-    $stats[$key]['title'] = $title;
-}
 $context['stats'] = ['stats' => $stats]; // c'est moche mais requis pour avoir la même structure que le contenu flexible
 
 // Text / Image 2

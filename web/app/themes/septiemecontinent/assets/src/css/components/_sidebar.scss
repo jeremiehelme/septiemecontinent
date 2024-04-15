@@ -1,0 +1,46 @@
+.layout-sidebar {
+    h3 {
+        margin: 0 0 15px;
+        color: var(--color-cerulean);
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        &:not(:first-child) {
+            border-top: 1px solid #DBDBDB;
+        }
+    }
+    a {
+        position: relative;
+        display: block;
+        padding: 15px 0;
+        padding-left: 42px;
+        text-decoration: none;
+        @include rhythm(14, 20);
+        color: var(--color-primary);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: url('../img/svg/arrow.svg') center no-repeat var(--color-secondary);
+            background-size: 15px 6.32px;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.2s;
+        }
+        &:hover {
+            color: var(--color-primary);
+            
+            &::before {
+                background-color: white;
+            }
+        }
+    }
+}

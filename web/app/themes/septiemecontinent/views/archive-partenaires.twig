@@ -1,0 +1,29 @@
+{# This file demonstrates using most of the index.twig template and modifying 
+   just a small part. See `search.twig` for an example of another approach #}
+
+{% extends "base.twig" %}
+
+{% block page_header %}{% endblock %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+
+  <ul>
+      {% for post in posts %}
+        <li class="partner">
+          <div class="partner-image">
+            {% if post.thumbnail.src %}
+              {{get_attachment_image(post.thumbnail, '130x130x0')}}
+            {% endif %}
+          </div>
+          <div class="partner-text">
+            <h3 class="partner-text-title">{{ post.title }}</h2>
+            <div class="partner-text-content">{{ post.content }}</div>
+            {% if post.meta('link') is not empty %}
+              <a class="partner-text-link" href="{{ post.meta('link') }}">{{__('Découvrir', 'septiemecontinent')}}{{svg('arrow')}}</a>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+{% endblock %}

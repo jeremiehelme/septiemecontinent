@@ -24,18 +24,35 @@
 $context = Timber::context();
 $timber_post     = Timber::get_post();
 
-if ($post->post_parent == 13) {
-    $timber_post->page_header = get_field('page_header', 13);
-    $timber_post->page_header['title'] = get_the_title(13);
-    $timber_post->page_header['thumbnail_id'] = get_post_thumbnail_id(13);
+if ($post->ID == ID_PAGE_COMPRENDRE) { // PAGE COMPRENDRE
+    $themes = Timber::get_posts([
+        'post_type' => 'page',
+        'post_status' => 'publish',
+        'post_parent' => ID_PAGE_COMPRENDRE
+    ]);
+    $context['themes'] = $themes;
+}
+if ($post->post_parent == ID_PAGE_COMPRENDRE) { // PAGES ENFANTS COMPRENDRE
+    $timber_post->pre_title = __('Les thématiques scientifiques', 'septiemecontinent');
+    $timber_post->page_header = get_field('page_header', ID_PAGE_COMPRENDRE);
+    $timber_post->page_header['title'] = get_the_title(ID_PAGE_COMPRENDRE);
+    $timber_post->page_header['thumbnail_id'] = get_post_thumbnail_id(ID_PAGE_COMPRENDRE);
+    $links = [];
     $themes = get_posts([
         'post_type' => 'page',
         'post_status' => 'publish',
-        'post_parent' => 13
+        'post_parent' => ID_PAGE_COMPRENDRE,
+        'exclude' => [$post->ID]
     ]);
+    foreach ($themes as $theme) {
+        $links[] = [
+            'title' => $theme->post_title,
+            'link' => get_permalink($theme)
+        ];
+    }
     $context['sidebar'] = Timber::get_sidebar('partial/sidebar.twig', [
         'title' => __('Autres thématiques', 'septiemecontinent'),
-        'posts' => $themes
+        'links' => $links
     ]);
 } else {
     $timber_post->page_header = get_field('page_header');

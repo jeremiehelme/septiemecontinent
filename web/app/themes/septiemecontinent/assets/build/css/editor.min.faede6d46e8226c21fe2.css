@@ -401,6 +401,8 @@ body#tinymce.wp-editor .button {
   padding: 15px 25px;
   background-color: #57FFD2;
   background-color: var(--accent-color);
+  border: 2px solid #57FFD2;
+  border: 2px solid var(--accent-color);
   color: #073654;
   color: var(--text-color);
   font-weight: 700;
@@ -432,4 +434,4 @@ body#tinymce.wp-editor .button:hover::after {
   transform: translateX(5px);
 }
 
-/*# sourceMappingURL=editor.min.ccfa09c0f48aaba0f435.css.map*/
+/*# sourceMappingURL=editor.min.faede6d46e8226c21fe2.css.map*/
