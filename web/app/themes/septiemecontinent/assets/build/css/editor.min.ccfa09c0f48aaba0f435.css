@@ -16,9 +16,9 @@
   --color-grey: #F0F0F0;
   --color-grey-rgb: 240, 240, 240;
   --vspace: 80px;
-  --hspace: 25px;
+  --hspace: 30px;
 }
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   :root {
     --vspace: 40px;
     --hspace: 20px;
@@ -358,7 +358,17 @@ body#tinymce.wp-editor {
   padding: 20px 40px !important;
 }
 body#tinymce.wp-editor {
-  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #073654;
+  color: var(--text-color);
+}
+body#tinymce.wp-editor img {
+  max-width: 100%;
+  height: auto;
+}
+body#tinymce.wp-editor iframe {
+  max-width: 100%;
 }
 body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1 {
   font-size: 32px;
@@ -422,4 +432,4 @@ body#tinymce.wp-editor .button:hover::after {
   transform: translateX(5px);
 }
 
-/*# sourceMappingURL=editor.min.250d387b74a7bb2f79b4.css.map*/
+/*# sourceMappingURL=editor.min.ccfa09c0f48aaba0f435.css.map*/

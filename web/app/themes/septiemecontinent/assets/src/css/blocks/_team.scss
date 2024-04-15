@@ -1,0 +1,62 @@
+.b-team {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .wrapper {
+        width: 1000px;
+    }
+    &-title {
+        margin: 0 0 15px;
+        color: var(--color-cerulean);
+    }
+    ul {
+        width: 925px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    &-member {
+        display: flex;
+        gap: 26px;
+        padding: 20px 0 30px;
+
+        &:not(:last-child) {
+            border-bottom: 2px solid rgba(var(--color-cerulean-rgb), 0.2);
+        }
+        &-picture {
+            flex: 0 0 80px;
+            width: 80px; 
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-description {
+            padding-right: 115px;
+
+            &-name {
+                @include rhythm(18, 24);
+                font-weight: bold;
+                color: var(--color-cerulean);
+                margin-bottom: 2px;
+            }
+            &-title {
+                @include rhythm(14, 20);
+                font-weight: bold;
+            }
+            &-text {
+                margin-top: 8px;
+                @include rhythm(14, 20);
+            } 
+            &-link {
+                margin-top: 15px;
+                @include rhythm(12, 15);
+                font-weight: bold;
+                text-transform: uppercase;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

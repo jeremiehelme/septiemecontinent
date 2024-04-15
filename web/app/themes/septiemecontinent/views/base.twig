@@ -12,9 +12,10 @@
 
 		{% include "partial/header.twig" %}
 
-		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="{{sidebar_class}}">
+		{% block page_header %}{% include('partial/page-header.twig') %}{% endblock %}
+
+		<section id="content" role="main" class="content-wrapper {% if sidebar %}with-sidebar{% endif %}">
+			<div class="layout-main">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}

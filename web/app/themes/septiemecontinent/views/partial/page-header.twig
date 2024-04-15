@@ -1,0 +1,24 @@
+<header class="c-pageHeader" data-background="{{post.page_header.background}}">
+    <div class="wrapper">
+        <div class="c-pageHeader-image">
+            {% if post.page_header.thumbnail_id is not empty %}
+                {{ get_attachment_image(post.page_header.thumbnail_id, 'full') }}
+            {% else %}
+                {{ get_attachment_image(post.thumbnail_id, 'full') }}
+            {% endif %}
+        </div>
+        <div class="c-pageHeader-text">
+            {% if post.page_header.pre_title is not empty %}
+                <div class="c-pageHeader-text-pretitle"><span>{{post.page_header.pre_title}}</span></div>
+            {% endif %}
+            <h1 class="c-pageHeader-text-title">
+                {% if post.page_header.title is not empty %}
+                    {{post.page_header.title}}
+                {% else %}
+                    {{post.title}}
+                {% endif %}
+            </h1>
+            {{post.page_header.texte}}
+        </div
+    </div>
+</header>

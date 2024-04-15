@@ -1,0 +1,31 @@
+<div class="b-team hspace">
+    <div class="wrapper">
+        <h2 class="b-team-title">{{ __("L'équipe", 'septiemecontinent') }}</h2>
+
+        <ul>
+            {% for member in team %}
+                <li class="b-team-member">
+                    <div class="b-team-member-picture">
+                        {{ get_attachment_image(member.photo, '80x80x1')}}
+                    </div>
+                    <div class="b-team-member-description">
+                        <div class="b-team-member-description-name">
+                            {{ member.name }}
+                        </div>
+                        <div class="b-team-member-description-title">
+                            {{ member.title }}
+                        </div>
+                        <div class="b-team-member-description-text">
+                            {{ member.text }}
+                        </div>
+                        <div class="b-team-member-description-link">
+                            {% if member.link is not empty %}
+                                <a href="{{member.link.url}}">{{member.link.title}}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

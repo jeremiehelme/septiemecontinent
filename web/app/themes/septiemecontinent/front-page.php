@@ -35,7 +35,7 @@ foreach ($stats as $key => $stat) {
     $title = str_replace(']', '</small>', $title);
     $stats[$key]['title'] = $title;
 }
-$context['stats'] = $stats;
+$context['stats'] = ['stats' => $stats]; // c'est moche mais requis pour avoir la même structure que le contenu flexible
 
 // Text / Image 2
 $text_image_2 = get_field('text_image_2');

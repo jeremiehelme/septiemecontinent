@@ -2,26 +2,22 @@
 
 {% block content %}
 	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		<header class="c-pageHeader" data-background="{{post.page_header.background}}">
-			<div class="wrapper">
-				<div class="c-pageHeader-image">
-					{{ get_attachment_image(post.thumbnail_id, 'full')}}
-				</div>
-				<div class="c-pageHeader-text">
-					<div class="c-pageHeader-text-pretitle"><span>{{post.page_header.pre_title}}</span></div>
-					<h1 class="c-pageHeader-text-title">
-						{% if post.page_header.title is not empty %}
-							{{post.page_header.title}}
-						{% else %}
-							{{post.title}}
-						{% endif %}
-					</h1>
-					{{post.page_header.texte}}
-				</div
-			</div>
-		</header>
-		<section class="article-content wrapper">
-			{{post.content}}
+		<section class="article-content">
+			{% if flexible_content is empty %}
+				<h1>{{post.post_title}}</h1>
+			{% endif %}
+			
+			{% if flexible_content is not empty %}
+				{% for block in flexible_content %}
+					{% include('blocks/' ~ block.acf_fc_layout ~ '.twig') with {fields: block} %}
+				{% endfor %}
+			{% else %}
+				{{post.content}}	
+			{% endif %}
+
+			{% if team is not empty %}
+				{% include('blocks/team.twig') with {fields: team} %}
+			{% endif %}
 		</section>
 	</article>
 {% endblock %}

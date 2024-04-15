@@ -1,1 +1,11 @@
-Sidebar in Timber. Add HTML to your hearts content.
+<h3 class="b-latestPosts-title hspace">{{ title }}</h2>
+
+<ul>
+    {% for post in posts %}
+        <li>
+            <a href="{{ function('get_permalink', post.ID) }}">
+                {{ post.post_title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

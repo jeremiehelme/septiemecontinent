@@ -23,7 +23,7 @@
                     "label": "Fond",
                     "name": "background",
                     "aria-label": "",
-                    "type": "select",
+                    "type": "button_group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -38,13 +38,10 @@
                         "secondary": "Vert texturé",
                         "white": "Blanc texturé"
                     },
-                    "default_value": false,
+                    "default_value": "",
                     "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": ""
+                    "layout": "horizontal"
                 },
                 {
                     "key": "field_66156c4e246c8",
@@ -181,6 +178,11 @@
                 "param": "page",
                 "operator": "!=",
                 "value": "42"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "child"
             }
         ]
     ],
@@ -193,5 +195,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712659455
+    "modified": 1713142261
 }

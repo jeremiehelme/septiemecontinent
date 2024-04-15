@@ -2,12 +2,12 @@
 
 {% block content %}
 
-    {% include('blocks/homeHero.twig') with {'fields':hero_data} %}
-    {% include('blocks/adnPushs.twig') with {'posts':adn_posts} %}
-    {% include('blocks/textImage.twig') with {'fields':text_image} %}
-    {% include('blocks/stats.twig') with {'stats':stats} %}
-    {% include('blocks/textImage.twig') with {'fields':text_image_2} %}
-    {% include('blocks/textImage.twig') with {'fields':text_image_3} %}
-    {% include('blocks/latestPosts.twig') with {'posts':latest_posts} %}
+    {% include('blocks/home-hero.twig') with {'fields':hero_data} %}
+    {% include('blocks/adn-pushs.twig') with {'posts':adn_posts} %}
+    {% include('blocks/text-image.twig') with {'fields':text_image} %}
+    {% include('blocks/stats.twig') with {'fields':stats} %}
+    {% include('blocks/text-image.twig') with {'fields':text_image_2} %}
+    {% include('blocks/text-image.twig') with {'fields':text_image_3} %}
+    {% include('blocks/latest-posts.twig') with {'posts':latest_posts} %}
 
 {% endblock %}

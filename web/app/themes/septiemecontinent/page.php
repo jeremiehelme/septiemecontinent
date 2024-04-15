@@ -22,8 +22,27 @@
  */
 
 $context = Timber::context();
-
 $timber_post     = Timber::get_post();
-$timber_post->page_header = get_field('page_header');
+
+if ($post->post_parent == 13) {
+    $timber_post->page_header = get_field('page_header', 13);
+    $timber_post->page_header['title'] = get_the_title(13);
+    $timber_post->page_header['thumbnail_id'] = get_post_thumbnail_id(13);
+    $themes = get_posts([
+        'post_type' => 'page',
+        'post_status' => 'publish',
+        'post_parent' => 13
+    ]);
+    $context['sidebar'] = Timber::get_sidebar('partial/sidebar.twig', [
+        'title' => __('Autres thématiques', 'septiemecontinent'),
+        'posts' => $themes
+    ]);
+} else {
+    $timber_post->page_header = get_field('page_header');
+    $context['flexible_content'] = get_field('flexible_content');
+    $context['team'] = get_field('team');
+}
+
 $context['post'] = $timber_post;
+
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );

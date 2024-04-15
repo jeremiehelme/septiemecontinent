@@ -183,6 +183,8 @@ class StarterSite extends Site
 			'440x9999x0',
 			'9999x360x0',
 			'345x345x1',
+			'769x9999x0',
+			'80x80x1',
 		];
 
 		foreach ($image_sizes as $image_size) {
