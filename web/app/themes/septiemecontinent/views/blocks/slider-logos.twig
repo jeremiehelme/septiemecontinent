@@ -1,16 +1,16 @@
 <div class="b-sliderLogos hspace">
     <div class="wrapper">
         <h2>{{ fields.title }}</h2>
-        <div class="b-sliderLogos-slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    {% for logo in fields.logos %}
-                        <div class="swiper-slide">
-                            {{ get_attachment_image(logo, '130x130x0') }}
-                        </div>
-                    {% endfor %}
-                </div>
+        <div class="b-sliderLogos-slider swiper">            
+            <div class="swiper-wrapper">
+                {% for logo in fields.logos %}
+                    <div class="swiper-slide">
+                        {{ get_attachment_image(logo, '130x130x0') }}
+                    </div>
+                {% endfor %}
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </div>

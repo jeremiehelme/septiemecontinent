@@ -15,7 +15,10 @@ class StarterSite extends Site
 		add_action('after_setup_theme', array($this, 'add_image_sizes'));
 		add_action('init', array($this, 'register_post_types'));
 		add_action('init', array($this, 'register_taxonomies'));
+
+		// acf
 		add_filter('acf/settings/save_json', array($this, 'my_acf_json_save_point'));
+		add_filter('acf/settings/load_json', array($this, 'my_acf_json_load_point'));
 		add_filter('acf/format_value/name=stats', array($this, 'stats_format_value'), 10, 3);
 
 		// rewrite rules
@@ -272,6 +275,10 @@ class StarterSite extends Site
 
 	public function my_acf_json_save_point( $path ) {
 		return get_stylesheet_directory() . '/acf-json';
+	}
+	public function my_acf_json_load_point( $paths ) {
+		$paths[] = get_stylesheet_directory() . '/acf-json';
+		return $paths;    
 	}
 
 	// Generate labels for register_post_type and register_taxonomy functions
