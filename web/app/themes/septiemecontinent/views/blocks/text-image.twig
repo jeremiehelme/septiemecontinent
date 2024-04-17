@@ -1,8 +1,8 @@
 {#
 order : classic, reverse
-background : polar, white
+background : polar, white, white_pattern
 margin : none, small, large
-imagesize : 440, 465, banner, video
+imagesize : 440, 465, banner, video, gallery
 #}
 <div class="b-textImage hspace" data-order="{{fields.order|default('classic')}}" data-background="{{fields.background|default('polar')}}" data-margin="{{fields.margin|default('small')}}" data-imagesize="{{fields.imagesize|default('440')}}">
     <div class="wrapper">
@@ -17,6 +17,14 @@ imagesize : 440, 465, banner, video
             {% if fields.imagesize is not empty %}
                 {% if fields.imagesize == 'banner' %}
                     {{ get_attachment_image(fields.image, '9999x360x0') }}
+                {% elseif fields.imagesize == 'gallery' %}
+                    <div class="b-textImage-image-gallery">
+                        {{ get_attachment_image(fields.image, '440x440x1') }}   
+                        {{ get_attachment_image(fields.image2, '215x215x1') }}
+                        {{ get_attachment_image(fields.image3, '215x215x1') }}
+                    </div>
+                {% elseif fields.imagesize == 'video' %}
+                    {{ fields.video }}
                 {% else %}
                     {{ get_attachment_image(fields.image, "#{fields.imagesize}x9999x0") }}
                 {% endif %}

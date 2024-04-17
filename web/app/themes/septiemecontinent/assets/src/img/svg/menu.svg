@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7 24 24" width="24" fill="currentColor"><path d="M1 0h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0 8h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0-4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="15" viewBox="0 0 19 15">
+  <defs>
+    <clipPath id="clip">
+      <use xlink:href="#fill"/>
+    </clipPath>
+    <clipPath id="clip-2">
+      <use xlink:href="#fill-2"/>
+    </clipPath>
+    <clipPath id="clip-3">
+      <use xlink:href="#fill-3"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_360" data-name="Groupe 360" transform="translate(-26 -16)">
+    <g id="Rectangle_167" data-name="Rectangle 167" transform="translate(26 30)" fill="none" stroke="#0071ae" stroke-width="2">
+      <rect id="fill" width="15" height="1" stroke="none"/>
+      <path d="M0,0h15M14,0v1M15,1h-15M1,1v-1" fill="none" clip-path="url(#clip)"/>
+    </g>
+    <g id="Rectangle_166" data-name="Rectangle 166" transform="translate(26 23)" fill="none" stroke="#0071ae" stroke-width="2">
+      <rect id="fill-2" width="19" height="1" stroke="none"/>
+      <path d="M0,0h19M18,0v1M19,1h-19M1,1v-1" fill="none" clip-path="url(#clip-2)"/>
+    </g>
+    <g id="Rectangle_165" data-name="Rectangle 165" transform="translate(26 16)" fill="none" stroke="#0071ae" stroke-width="2">
+      <rect id="fill-3" width="15" height="1" stroke="none"/>
+      <path d="M0,0h15M14,0v1M15,1h-15M1,1v-1" fill="none" clip-path="url(#clip-3)"/>
+    </g>
+  </g>
+</svg>

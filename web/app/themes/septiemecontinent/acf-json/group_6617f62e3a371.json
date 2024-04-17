@@ -197,10 +197,10 @@
                         },
                         {
                             "key": "field_6617f8d6ee594",
-                            "label": "URL Youtube",
-                            "name": "youtube_url",
+                            "label": "URL vidéo",
+                            "name": "video",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "oembed",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": [
@@ -217,11 +217,8 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "width": 597,
+                            "height": 332
                         },
                         {
                             "key": "field_6617f821d1073",
@@ -596,6 +593,11 @@
                 "param": "page_parent",
                 "operator": "!=",
                 "value": "13"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "42"
             }
         ]
     ],
@@ -610,5 +612,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713215753
+    "modified": 1713353158
 }

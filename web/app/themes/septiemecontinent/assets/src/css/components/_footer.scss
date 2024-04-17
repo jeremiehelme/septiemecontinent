@@ -2,52 +2,10 @@
   @include rhythm(14, 18);
 
   &-social {
+    text-align: right;
     padding-top: 15px;
     padding-bottom: 15px;
     background: var(--color-grey);
-    font-weight: 600;
-    text-align: right;
-    text-transform: uppercase;
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: inline-flex;
-
-      li {
-        margin-left: 35px;
-
-        @include respond-to('medium') {
-          &:first-child {
-            margin-left: 0;
-          }
-        }
-      }
-      a {
-        display: flex;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background: var(--color-cerulean);
-        justify-content: center;
-        align-items: center;
-        color: var(--color-secondary);
-        transition: background-color 0.2s ease-in-out;
-
-        &:hover {
-          background: var(--color-primary);
-        }
-      }
-      @include respond-to('medium') {
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-      }
-    }
-    @include respond-to('medium') {
-      text-align: center;
-    }
   }
   &-menu {
     padding-top: 30px;

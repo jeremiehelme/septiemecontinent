@@ -8,17 +8,20 @@
 @import "mixins/breakpoints";
 
 // COMPONENTS
-@import "components/headings";
 @import "components/button";
-@import "components/header";
 @import "components/footer";
+@import "components/header";
+@import "components/headings";
+@import "components/link";
 @import "components/navigation";
 @import "components/pageHeader";
 @import "components/pagination";
 @import "components/partner";
 @import "components/postsList";
 @import "components/push";
+@import "components/showHide";
 @import "components/sidebar";
+@import "components/socialLinks";
 @import "components/tease";
 
 // BLOCKS
@@ -26,6 +29,7 @@
 @import "blocks/instagram";
 @import "blocks/latestPosts";
 @import "blocks/pushs";
+@import "blocks/sliderLogos";
 @import "blocks/stats";
 @import "blocks/team";
 @import "blocks/textImage";
@@ -79,6 +83,25 @@ iframe {
   max-width: 100%;
 }
 
+select {
+  appearance: none;
+  padding: 15px 40px 15px 15px;
+  border: 2px solid rgba(var(--color-primary-rgb), 0.2);
+  background: url('../img/svg/arrow_down.svg') no-repeat right 15px center var(--color-grey);
+  color: var(--text-color); 
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+
+  &:focus-within {
+    background-image: url('../img/svg/arrow_up.svg');
+  }
+}
+
 .hspace {
   padding-left: var(--hspace);
   padding-right: var(--hspace);
@@ -104,5 +127,31 @@ iframe {
     flex: 0 1 360px;
     min-width: 360px;
     margin-left: 40px;
+
+    select {
+      display: none;
+    }
+  }
+
+  @include respond-to('medium') {
+    flex-direction: column;
+
+    .layout-main {
+      flex: 1;
+    }
+    .layout-sidebar {
+      flex: 1;
+      margin-left: 0;
+      margin-top: 40px;
+      min-width: 0;
+
+      ul {
+        display: none;
+      }
+      select {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 }

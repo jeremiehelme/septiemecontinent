@@ -1,0 +1,18 @@
+{% extends "page.twig" %}
+
+{% block page_header %}{% endblock %}
+
+{% block extra_content_before %}
+  <div class="b-textImage hspace" data-order="reverse" data-background="polar" data-margin="small" data-imagesize="440">
+    <div class="wrapper">
+        <div class="b-textImage-text">
+            <img src="{{ theme.uri }}/assets/build/img/logo_exploration_bleu.jpg" alt="">
+            <h3 class="b-textImage-text-title">{{header_explorationbleue.title}}</h1>
+            {{header_explorationbleue.text}}
+        </div>
+        <div class="b-textImage-image">
+			{{ get_attachment_image(header_explorationbleue.image, "440x9999x0") }}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -29,23 +29,6 @@
             }
         }
         &-link {
-            @include rhythm(12, 15);
-            font-weight: bold;
-            text-transform: uppercase;
-            color: var(--color-cerulean);
-            text-decoration: none;
-            transition: color 0.3s ease;
-
-            svg {
-                margin-left: 12px;
-
-                path {
-                    fill: currentColor;
-                }
-            }
-            &:hover {
-                color: var(--color-primary);
-            }
         }
     }
 }

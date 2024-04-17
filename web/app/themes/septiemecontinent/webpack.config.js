@@ -17,10 +17,10 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const chucksCSS = ["main", "editor"];
 const ignoreEmit = [
-  /css\.min\..+\.js/
+  /css\.min\.js/
 ];
 for (let i = 0; i < chucksCSS.length; i++) {
-  ignoreEmit.push(new RegExp(`${chucksCSS[i]}\\.min\\..+\\.js$`));
+  ignoreEmit.push(new RegExp(`${chucksCSS[i]}\\.min\.js$`));
 }
 
 module.exports = [
@@ -30,7 +30,7 @@ module.exports = [
       css: ["./assets/src/js/css.js"],
     },
     output: {
-      filename: "./js/[name].min.[fullhash].js",
+      filename: "./js/[name].min.js",
       assetModuleFilename: './img/[name][ext]',
       path: path.resolve( __dirname, 'assets/build' ),
     },
@@ -122,8 +122,8 @@ module.exports = [
       // css extraction into dedicated file
       new MiniCssExtractPlugin({
         filename: ({ chunk }) =>
-        `./css/${chunk.name}.min.[fullhash].css`,
-        // filename: "./assets/build/css/[name].min.[fullhash].css",
+        `./css/${chunk.name}.min.css`,
+        // filename: "./assets/build/css/[name].min.css",
       }),
       //pour les images qui ne passent pas directement par code css ou js
       new CopyPlugin( {

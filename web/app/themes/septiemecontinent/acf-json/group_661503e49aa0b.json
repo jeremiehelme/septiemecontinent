@@ -19,26 +19,6 @@
             "layout": "row",
             "sub_fields": [
                 {
-                    "key": "field_661d41d1bb9df",
-                    "label": "Désactiver l'affichage",
-                    "name": "disabled",
-                    "aria-label": "",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
-                },
-                {
                     "key": "field_66156cd5246cb",
                     "label": "Fond",
                     "name": "background",
@@ -203,34 +183,6 @@
                             "parent_repeater": "field_6615781a246cc"
                         }
                     ]
-                },
-                {
-                    "key": "field_6615787c246ce",
-                    "label": "Réseaux sociaux",
-                    "name": "display_social_links",
-                    "aria-label": "",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_661d41d1bb9df",
-                                "operator": "!=",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
                 }
             ]
         }
@@ -269,9 +221,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713214720
+    "modified": 1713363474
 }

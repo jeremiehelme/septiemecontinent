@@ -3,6 +3,8 @@
 {% block content %}
 	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 		<section class="article-content">
+			{% block extra_content_before %}{% endblock %}
+
 			{% if flexible_content is empty %}
 				{% if post.pre_title is not empty %}
 					<h2 class="pretitle">{{post.pre_title}}</h2>
@@ -22,7 +24,7 @@
 				{% include('blocks/team.twig') with {fields: team} %}
 			{% endif %}
 
-			{% block extra_content %}{% endblock %}
+			{% block extra_content_after %}{% endblock %}
 		</section>
 	</article>
 {% endblock %}

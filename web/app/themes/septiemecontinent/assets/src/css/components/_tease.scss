@@ -7,13 +7,6 @@
 
         &:hover {
             color: initial;
-
-            .tease-more {
-                color: var(--color-primary);
-            }
-            svg {
-                transform: translateX(10px);
-            }
         }
     }
     &-image {
@@ -34,22 +27,5 @@
     &-more {
         display: block;
         margin-top: 15px;
-        @include rhythm(12, 15);
-        text-transform: uppercase;
-        color: var(--color-cerulean);
-        font-weight: 800;
-        transition: color .3s;
-
-        svg {
-            width: 19px;
-            height: 8px;
-            margin-left: 12px;
-            transition: transform 0.3s;
-            transform: translateX(0);
-
-            path {
-                fill: currentColor;
-            }
-        }
     }
 }

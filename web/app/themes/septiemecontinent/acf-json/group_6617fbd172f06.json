@@ -118,7 +118,7 @@
                     "label": "Lien",
                     "name": "link",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -127,7 +127,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "parent_repeater": "field_6617fbd1a9d35"
                 }
             ]
@@ -147,9 +151,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712849537
+    "modified": 1713363417
 }

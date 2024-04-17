@@ -44,7 +44,8 @@ if (is_post_type_archive('partenaires') || is_tax('type')) {
 	foreach ($terms as $term) {
 		$links[] = [
 			'title' => $term->name,
-			'link' => get_term_link($term)
+			'link' => get_term_link($term),
+			'current' => is_tax('type', $term->term_id)
 		];
 	}
 	$context['sidebar'] = Timber::get_sidebar('partial/sidebar.twig', [

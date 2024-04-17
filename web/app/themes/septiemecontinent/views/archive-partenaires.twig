@@ -20,7 +20,7 @@
             <h3 class="partner-text-title">{{ post.title }}</h2>
             <div class="partner-text-content">{{ post.content }}</div>
             {% if post.meta('link') is not empty %}
-              <a class="partner-text-link" href="{{ post.meta('link') }}">{{__('Découvrir', 'septiemecontinent')}}{{svg('arrow')}}</a>
+              <a class="partner-text-link c-link" href="{{ post.meta('link') }}">{{__('Découvrir', 'septiemecontinent')}}{{svg('arrow')}}</a>
             {% endif %}
           </div>
         </li>

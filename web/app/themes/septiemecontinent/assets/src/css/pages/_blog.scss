@@ -10,3 +10,10 @@
         }
     }
 }
+.single-post {
+    @include respond-to(small) {
+        .layout-sidebar h3 {
+            display: none;
+        }
+    }
+}

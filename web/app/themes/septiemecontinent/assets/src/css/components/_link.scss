@@ -1,0 +1,27 @@
+.c-link {
+    @include rhythm(12, 15);
+    text-transform: uppercase;
+    color: var(--color-cerulean);
+    font-weight: 800;
+    transition: color .3s;
+    text-decoration: none;
+
+    svg {
+        width: 19px;
+        height: 8px;
+        margin-left: 12px;
+        transition: transform 0.3s;
+        transform: translateX(0);
+
+        path {
+            fill: currentColor;
+        }
+    }
+    &:hover {
+        color: var(--color-primary);
+
+        svg {
+            transform: translateX(10px);
+        }
+    }
+}

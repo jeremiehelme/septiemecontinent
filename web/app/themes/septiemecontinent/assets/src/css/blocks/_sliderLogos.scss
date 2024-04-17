@@ -5,5 +5,41 @@
 
     h2 {
         margin-bottom: 20px;
+        color: var(--color-cerulean);
+    }
+    &-slider {
+        position: relative;
+        width: 780px;
+        margin: 0 auto;
+    }
+    .swiper {
+        padding: 0 20px;
+    }
+    .swiper-slide {
+        width: 170px;
+        height: 170px;
+        padding: 20px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .swiper-button-prev {
+        left: -40px;
+        color: var(--color-cerulean);
+    }
+    .swiper-button-next {
+        right: -40px;
+        color: var(--color-cerulean);
+    }
+    &[data-background="polar"] {
+        background: var(--color-polar);
+    }
+
+    @include respond-to('medium') {
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
     }
 }

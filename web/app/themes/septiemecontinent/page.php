@@ -42,12 +42,13 @@ if ($post->post_parent == ID_PAGE_COMPRENDRE) { // PAGES ENFANTS COMPRENDRE
         'post_type' => 'page',
         'post_status' => 'publish',
         'post_parent' => ID_PAGE_COMPRENDRE,
-        'exclude' => [$post->ID]
+        // 'exclude' => [$post->ID]
     ]);
     foreach ($themes as $theme) {
         $links[] = [
             'title' => $theme->post_title,
-            'link' => get_permalink($theme)
+            'link' => get_permalink($theme),
+            'current' => $theme->ID == $post->ID
         ];
     }
     $context['sidebar'] = Timber::get_sidebar('partial/sidebar.twig', [
@@ -57,6 +58,8 @@ if ($post->post_parent == ID_PAGE_COMPRENDRE) { // PAGES ENFANTS COMPRENDRE
 } else {
     $timber_post->page_header = get_field('page_header');
     $context['flexible_content'] = get_field('flexible_content');
+    $context['header_explorationbleue'] = get_field('header_explorationbleue');
+    $context['header_pedago'] = get_field('header_pedago');
     $context['team'] = get_field('team');
 }
 

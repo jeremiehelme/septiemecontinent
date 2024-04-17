@@ -8,3 +8,11 @@
         </li>
     {% endfor %}
 </ul>
+<select name="" id="" data-controller="selectnav" data-action="change->selectnav#redirect">
+    {% if title_in_select %}
+        <option value="">{{ title }}</option>
+    {% endif %}
+    {% for item in links %}
+        <option value="{{ item.link }}" {% if item.current %}selected="selected"{% endif %}>{{ item.title }}</option>
+    {% endfor %}
+</select>

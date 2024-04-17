@@ -28,6 +28,7 @@ foreach ($latest_posts as $post) {
 }
 $context['sidebar'] = Timber::get_sidebar('partial/sidebar.twig', [
     'title' => __('Derniers articles', 'septiemecontinent'),
+    'title_in_select' => true,
     'links' => $latest_posts
 ]);
 

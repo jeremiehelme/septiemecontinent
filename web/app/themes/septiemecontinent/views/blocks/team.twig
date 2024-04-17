@@ -8,20 +8,27 @@
                     <div class="b-team-member-picture">
                         {{ get_attachment_image(member.photo, '80x80x1')}}
                     </div>
-                    <div class="b-team-member-description">
-                        <div class="b-team-member-description-name">
-                            {{ member.name }}
+                    <div class="b-team-member-description c-showHide" data-controller="showhide">
+                        <div class="c-showHide-trigger" data-showhide-target="trigger">
+                            <div class="b-team-member-description-name">
+                                {{ member.name }}
+                            </div>
+                            <div class="b-team-member-description-title">
+                                {{ member.title }}
+                            </div>
                         </div>
-                        <div class="b-team-member-description-title">
-                            {{ member.title }}
-                        </div>
-                        <div class="b-team-member-description-text">
-                            {{ member.text }}
-                        </div>
-                        <div class="b-team-member-description-link">
-                            {% if member.link is not empty %}
-                                <a href="{{member.link.url}}">{{member.link.title}}</a>
-                            {% endif %}
+                        <div class="c-showHide-content" data-showhide-target="content">
+                            <div class="b-team-member-description-text">
+                                {{ member.text }}
+                            </div>
+                            <div class="b-team-member-description-link">
+                                {% if member.link is not empty %}
+                                    <a href="{{member.link}}" class="c-link">
+                                        {{ __('En savoir +', 'septiemecontinent') }}
+                                        {{ svg('arrow') }}
+                                    </a>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </li>

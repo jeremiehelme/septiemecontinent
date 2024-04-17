@@ -67,13 +67,11 @@ class StarterSite extends Site
 	public function add_theme_scripts()
 	{
 		// CSS
-		$cssFilePath = glob(get_template_directory() . '/assets/build/css/main.min.*.css');
-		$cssFileURI = get_template_directory_uri() . '/assets/build/css/' . basename($cssFilePath[0]);
+		$cssFileURI = get_template_directory_uri() . '/assets/build/css/main.min.css';
 		wp_enqueue_style('main_css', $cssFileURI);
 
 		// JS
-		$jsFilePath = glob(get_template_directory() . '/assets/build/js/index.min.*.js');
-		$jsFileURI = get_template_directory_uri() . '/assets/build/js/' . basename($jsFilePath[0]);
+		$jsFileURI = get_template_directory_uri() . '/assets/build/js/index.min.js';
 		wp_enqueue_script('main_js', $jsFileURI, null, null, true);
 	}
 
@@ -85,7 +83,6 @@ class StarterSite extends Site
 	public function add_to_context($context)
 	{
 		$context['menu']  = Timber::get_menu();
-		// $context['menu_footer']  = Timber::get_menu('footer');
 		$context['site']  = $this;
 		$context['is_front_page'] = is_front_page();
 
@@ -201,6 +198,8 @@ class StarterSite extends Site
 			'769x9999x0',
 			'80x80x1',
 			'130x130x0',
+			'215x215x1',
+			'440x440x1',
 		];
 
 		foreach ($image_sizes as $image_size) {
@@ -218,8 +217,7 @@ class StarterSite extends Site
 
 	public function add_editor_styles()
 	{
-		$cssFilePath = glob(get_template_directory() . '/assets/build/css/editor.min.*.css');
-		$cssFileURI = get_template_directory_uri() . '/assets/build/css/' . basename($cssFilePath[0]);
+		$cssFileURI = get_template_directory_uri() . '/assets/build/css/editor.min.css';
 		add_editor_style($cssFileURI);
 	}
 
