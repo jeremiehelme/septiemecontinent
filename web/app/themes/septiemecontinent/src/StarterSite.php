@@ -190,7 +190,7 @@ class StarterSite extends Site
 		// width x height x crop
 		$image_sizes = [
 			'9999x567x0',
-			'392x240x1',
+			'425x260x1',
 			'465x9999x0',
 			'440x9999x0',
 			'9999x360x0',

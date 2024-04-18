@@ -55,4 +55,7 @@
         @include rhythm(14, 16);
         font-weight: 700;
     }
+    &[data-background="polar"] {
+        background: var(--color-polar);
+    }
 }

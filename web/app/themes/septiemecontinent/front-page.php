@@ -13,7 +13,7 @@ $adn_posts = [];
 $pushs_adn = get_field('pushs_adn');
 if (!empty($pushs_adn) && !empty($pushs_adn['pushs'])) {
     foreach ($pushs_adn['pushs'] as $key => $push) {
-        $push->thumbnail = get_the_post_thumbnail($push->ID, '392x240x1');
+        $push->thumbnail = get_the_post_thumbnail($push->ID, '425x260x1');
         $push->excerpt = get_the_excerpt($push->ID);
         $push->permalink = get_permalink($push->ID);
         $adn_posts[] = $push;

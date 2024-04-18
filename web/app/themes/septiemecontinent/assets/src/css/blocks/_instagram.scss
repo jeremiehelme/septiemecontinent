@@ -10,4 +10,7 @@
         margin-bottom: 20px;
         margin-left: 20px;
     }
+    &[data-background="polar"] {
+        background: var(--color-polar);
+    }
 }

@@ -1,8 +1,8 @@
-<div class="b-instagram">
+<div class="b-instagram" data-background="{{ fields.background }}">
     <div class="hspace">
         <div class="wrapper">
-            <h2 class="b-instagram-title">En images</h2>
-            <a href="" class="button">Sur Insta</a>
+            <h2 class="b-instagram-title">{{ __('En images', 'septiemecontinent') }}</h2>
+            <a href="https://www.instagram.com/7econtinent/" target="_blank" rel="noopener" class="button">{{ __('Sur Insta', 'septiemecontinent') }}</a>
         </div>
     </div>
     {{ function('do_shortcode', '[instagram feed="148"]') }}

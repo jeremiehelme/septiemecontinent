@@ -22,7 +22,13 @@
         color: #fff;
     }
     &-image {
-        @include fit(392, 240);
+        overflow: hidden;
+        @include fit(400, 245);
+
+        img {
+            transform: scale(1);
+            transition: transform 0.5s ease-in-out;
+        }
     }
     &-text {
         position: absolute;
@@ -43,6 +49,11 @@
             path {
                 fill: currentColor;
             }
+        }
+    }
+    &:hover {
+        .c-push-image img {
+            transform: scale(1.1);
         }
     }
 }

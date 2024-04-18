@@ -1,10 +1,30 @@
 .c-showHide {
     &-trigger {
+        position: relative;
         cursor: pointer;
+        padding-right: 115px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100%;
+            background: url('../img/svg/arrow_down.svg') center no-repeat;
+            transform: rotate(0deg);
+            transform-origin: center;
+            transition: transform 0.5s ease-in-out;
+        }
     }
     &-content {
-        height: 0;
         overflow: hidden;
+        height: 0;
         transition: height 0.5s ease-in-out;
+    }
+    &.visible {
+        .c-showHide-trigger::after {
+            transform: rotate(180deg);
+        }
     }
 }

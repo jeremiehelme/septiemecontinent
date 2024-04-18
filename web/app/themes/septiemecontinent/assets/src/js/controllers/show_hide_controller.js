@@ -20,6 +20,7 @@ export default class extends Controller {
   }
   showContent() {
     this.contentTarget.style.height = `${this.contentTarget.scrollHeight}px`;
+    this.element.classList.add('visible');
   }
 
   hideContent() {
@@ -29,6 +30,7 @@ export default class extends Controller {
     getComputedStyle(this.contentTarget).height;
 
     this.contentTarget.style.height = '0';
+    this.element.classList.remove('visible');
   }
 }
 
