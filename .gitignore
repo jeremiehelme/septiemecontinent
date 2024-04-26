@@ -32,3 +32,8 @@ web/.htaccess
 
 # WP-CLI
 wp-cli.local.yml
+
+
+#db files
+*.sql.gz
+.sql
