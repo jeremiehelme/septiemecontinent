@@ -36,4 +36,10 @@ wp-cli.local.yml
 
 #db files
 *.sql.gz
-.sql
+*.sql
+
+#DDEV files
+.ddev/
+
+#Mac files
+.DS_Store
