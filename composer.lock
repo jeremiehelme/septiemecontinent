@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af9102b63495a1be04a421cb78a31a3e",
+    "content-hash": "d0411b14f45d03a27d19c03cd457caef",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -6001,6 +6001,24 @@
             "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         },
         {
+            "name": "wpackagist-plugin/wp-all-import",
+            "version": "3.7.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-all-import/",
+                "reference": "tags/3.7.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-all-import.3.7.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-all-import/"
+        },
+        {
             "name": "wpackagist-theme/twentytwentythree",
             "version": "1.4",
             "source": {
@@ -6873,5 +6891,5 @@
         "php": ">=7.4"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
