@@ -34,13 +34,13 @@ $context['stats'] = ['stats' => $stats]; // c'est moche mais requis pour avoir l
 // Text / Image 2
 $text_image_2 = get_field('text_image_2');
 $text_image_2['imagesize'] = '465';
+$text_image_2['order'] = 'reverse';
 $context['text_image_2'] = $text_image_2;
 
 // Text / Image 3
 $text_image_3 = get_field('text_image_3');
 $text_image_3['imagesize'] = '440';
 $text_image_3['background'] = 'white';
-$text_image_3['order'] = 'reverse';
 $context['text_image_3'] = $text_image_3;
 
 // Actus
