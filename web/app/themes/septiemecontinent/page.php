@@ -22,7 +22,7 @@
  */
 
 $context = Timber::context();
-$timber_post     = Timber::get_post();
+$timber_post = Timber::get_post();
 
 if ($post->ID == ID_PAGE_COMPRENDRE) { // PAGE COMPRENDRE
     $themes = Timber::get_posts([
@@ -42,6 +42,7 @@ if ($post->post_parent == ID_PAGE_COMPRENDRE) { // PAGES ENFANTS COMPRENDRE
         'post_type' => 'page',
         'post_status' => 'publish',
         'post_parent' => ID_PAGE_COMPRENDRE,
+        'no_found_rows' => 'true'
         // 'exclude' => [$post->ID]
     ]);
     foreach ($themes as $theme) {
@@ -65,4 +66,4 @@ if ($post->post_parent == ID_PAGE_COMPRENDRE) { // PAGES ENFANTS COMPRENDRE
 
 $context['post'] = $timber_post;
 
-Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
+Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);
