@@ -42,8 +42,9 @@ if ($post->post_parent == ID_PAGE_COMPRENDRE) { // PAGES ENFANTS COMPRENDRE
         'post_type' => 'page',
         'post_status' => 'publish',
         'post_parent' => ID_PAGE_COMPRENDRE,
-        'no_found_rows' => 'true'
-        // 'exclude' => [$post->ID]
+        'no_found_rows' => 'true',
+        'orderby' => 'date',
+        'order' => 'DESC'
     ]);
     foreach ($themes as $theme) {
         $links[] = [
