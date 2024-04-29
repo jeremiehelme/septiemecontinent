@@ -2077,6 +2077,12 @@ h4, .h4 {
   padding: 0;
 }
 
+.article-content p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
 .article-content .pretitle {
   font-weight: bold;
   margin: 0 0 5px;
