@@ -72,11 +72,11 @@
                 content: '';
                 position: absolute;
                 z-index: 0;
-                top: 3px;
+                top: 4px;
                 left: -4px;
                 background: var(--color-secondary);
                 width: calc(100% + 24px);
-                height: 8px;
+                height: 10px;
             }
         }
         &-title {

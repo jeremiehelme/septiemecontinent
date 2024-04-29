@@ -885,12 +885,12 @@ h4, .h4 {
   content: "";
   position: absolute;
   z-index: 0;
-  top: 3px;
+  top: 4px;
   left: -4px;
   background: #57FFD2;
   background: var(--color-secondary);
   width: calc(100% + 24px);
-  height: 8px;
+  height: 10px;
 }
 .c-pageHeader-text-title {
   position: relative;
@@ -2127,6 +2127,11 @@ html {
   color: var(--text-color);
   background: #57FFD2;
   background: var(--color-secondary);
+}
+
+b,
+strong {
+  font-weight: 600 !important;
 }
 
 a {

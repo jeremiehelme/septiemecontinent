@@ -69,6 +69,11 @@ body {
   background: var(--color-secondary);
 }
 
+b,
+strong {
+  font-weight: 600 !important;
+}
+
 a {
   color: var(--text-color);
   text-decoration: underline;
