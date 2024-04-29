@@ -1,5 +1,5 @@
 <?php
-include_once(__DIR__ . '/../config/constants.php');
+include_once (__DIR__ . '/../config/constants.php');
 use Timber\Site;
 
 /**
@@ -36,7 +36,21 @@ class StarterSite extends Site
 		// scripts / styles
 		add_action('wp_enqueue_scripts', array($this, 'add_theme_scripts'));
 
+		//add links to head
+		add_action('wp_head', [$this, 'add_links_to_head']);
+
 		parent::__construct();
+	}
+
+	/* write anything here that reminds you what this code is for */
+
+	public function add_links_to_head()
+	{
+		?>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+		<?php
 	}
 
 	/**
@@ -45,11 +59,11 @@ class StarterSite extends Site
 	public function register_post_types()
 	{
 		register_post_type('partenaires', [
-				'labels'      => $this->get_custom_entity_labels('partenaire', 'partenaires', 'm'),
-				'public'      => true,
-				'has_archive' => true,
-				'menu_icon'   => 'dashicons-share-alt',
-				'supports'    => ['title', 'editor', 'thumbnail']
+			'labels' => $this->get_custom_entity_labels('partenaire', 'partenaires', 'm'),
+			'public' => true,
+			'has_archive' => true,
+			'menu_icon' => 'dashicons-share-alt',
+			'supports' => ['title', 'editor', 'thumbnail']
 		]);
 	}
 
@@ -58,8 +72,8 @@ class StarterSite extends Site
 	 */
 	public function register_taxonomies()
 	{
-		register_taxonomy( 'type', 'partenaires', [
-			'labels'      => $this->get_custom_entity_labels('type', 'types', 'm'),
+		register_taxonomy('type', 'partenaires', [
+			'labels' => $this->get_custom_entity_labels('type', 'types', 'm'),
 			'hierarchical' => true
 		]);
 	}
@@ -82,8 +96,8 @@ class StarterSite extends Site
 	 */
 	public function add_to_context($context)
 	{
-		$context['menu']  = Timber::get_menu();
-		$context['site']  = $this;
+		$context['menu'] = Timber::get_menu();
+		$context['site'] = $this;
 		$context['is_front_page'] = is_front_page();
 
 		return $context;
@@ -142,7 +156,7 @@ class StarterSite extends Site
 		// );
 
 		add_theme_support('menus');
-		add_post_type_support( 'page', 'excerpt' );
+		add_post_type_support('page', 'excerpt');
 	}
 
 	public function textdomain()
@@ -271,20 +285,23 @@ class StarterSite extends Site
 		return wp_get_attachment_image($attachment_id, $size, $icon);
 	}
 
-	public function my_acf_json_save_point( $path ) {
+	public function my_acf_json_save_point($path)
+	{
 		return get_stylesheet_directory() . '/acf-json';
 	}
-	public function my_acf_json_load_point( $paths ) {
+	public function my_acf_json_load_point($paths)
+	{
 		$paths[] = get_stylesheet_directory() . '/acf-json';
-		return $paths;    
+		return $paths;
 	}
 
 	// Generate labels for register_post_type and register_taxonomy functions
-	public function get_custom_entity_labels($singular, $plural, $genre = 'm', $overwrite = array()) {
-		$un_une = "un".($genre=='f'?'e':'');
-		$tous_toutes = "tou".($genre=='f'?'te':'')."s";
-	 
-	 
+	public function get_custom_entity_labels($singular, $plural, $genre = 'm', $overwrite = array())
+	{
+		$un_une = "un" . ($genre == 'f' ? 'e' : '');
+		$tous_toutes = "tou" . ($genre == 'f' ? 'te' : '') . "s";
+
+
 		if (in_array($singular[0], array('a', 'e', 'é', 'è', 'i', 'o', 'u'))) {
 			$le_la_l = "l'";
 		} else {
@@ -294,8 +311,8 @@ class StarterSite extends Site
 				$le_la_l = "le ";
 			}
 		}
-	 
-	 
+
+
 		if ($genre == 'f') {
 			$nouveau_nouvelle_nouvel = "nouvelle";
 		} else {
@@ -305,31 +322,32 @@ class StarterSite extends Site
 				$nouveau_nouvelle_nouvel = "nouveau";
 			}
 		}
-	 
-	 
+
+
 		$labels = array(
 			'name' => ucfirst($plural),
 			'singular_name' => ucfirst($singular),
 			'menu_name' => ucfirst($plural),
-			'name_admin_bar' => "Ajouter ".$un_une." $singular",
-			'all_items' => ucfirst($tous_toutes)." les $plural",
+			'name_admin_bar' => "Ajouter " . $un_une . " $singular",
+			'all_items' => ucfirst($tous_toutes) . " les $plural",
 			'add_new' => 'Ajouter',
-			'add_new_item' => "Ajouter ".$un_une." $singular",
-			'edit_item' => "Modifier ".$le_la_l."$singular",
-			'new_item' => ucfirst($nouveau_nouvelle_nouvel)." $singular",
-			'view_item' => "Voir ".$le_la_l."$singular",
-			'search_items' => "Rechercher ".$un_une." $singular",
-			'not_found' => "Aucun".($genre=='f'?'e':'')." $singular trouvé",
-			'not_found_in_trash' => "Aucun".($genre=='f'?'e':'')." $singular dans la corbeille",
+			'add_new_item' => "Ajouter " . $un_une . " $singular",
+			'edit_item' => "Modifier " . $le_la_l . "$singular",
+			'new_item' => ucfirst($nouveau_nouvelle_nouvel) . " $singular",
+			'view_item' => "Voir " . $le_la_l . "$singular",
+			'search_items' => "Rechercher " . $un_une . " $singular",
+			'not_found' => "Aucun" . ($genre == 'f' ? 'e' : '') . " $singular trouvé",
+			'not_found_in_trash' => "Aucun" . ($genre == 'f' ? 'e' : '') . " $singular dans la corbeille",
 			'parent_item_colon' => "Parent",
 		);
 		$labels = $overwrite + $labels;
-	 
-	 
-		return $labels;
-	}	 
 
-	public function stats_format_value($value, $post_id, $field) {
+
+		return $labels;
+	}
+
+	public function stats_format_value($value, $post_id, $field)
+	{
 		foreach ($value as $key => $stat) {
 			$title = $stat['title'];
 			$title = str_replace('[', '<small>', $title);
