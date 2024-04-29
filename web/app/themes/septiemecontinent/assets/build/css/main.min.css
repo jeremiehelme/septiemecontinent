@@ -1618,6 +1618,7 @@ h4, .h4 {
 }
 .b-team-member-description {
   padding-top: 18px;
+  width: 100%;
 }
 .b-team-member-description-name {
   font-size: 18px;
@@ -2099,7 +2100,8 @@ html {
   }
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: #073654;
   color: var(--text-color);
   background: #57FFD2;
