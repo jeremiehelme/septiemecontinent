@@ -1,0 +1,214 @@
+# Translation of Development (trunk) in French (France)
+# This file is distributed under the same license as the Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-12-01 13:05:37+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: Development (trunk)\n"
+
+#: textpattern-importer.php:91
+msgid "Import"
+msgstr "Importer"
+
+#: textpattern-importer.php:75
+msgid "Steps may take a few minutes depending on the size of your database. Please be patient."
+msgstr "Cette procédure peut prendre quelques minutes en fonction de la taille de votre base de données. Soyez patient."
+
+#: textpattern-importer.php:198
+msgid "Importing Categories..."
+msgstr "Importation des catégories en cours&hellip;"
+
+#: textpattern-importer.php:222
+msgid "Done! <strong>%1$s</strong> category imported."
+msgid_plural "Done! <strong>%1$s</strong> categories imported."
+msgstr[0] "Terminé&nbsp;! <strong>%1$s</strong> catégorie importée."
+msgstr[1] "Terminé&nbsp;! <strong>%1$s</strong> catégories importées."
+
+#: textpattern-importer.php:225
+msgid "No Categories to Import!"
+msgstr "Aucune catégorie à importer&nbsp;!"
+
+#: textpattern-importer.php:239
+msgid "Importing Users..."
+msgstr "Importation des utilisateurs en cours&hellip;"
+
+#: textpattern-importer.php:294
+msgid "Done! <strong>%1$s</strong> users imported."
+msgstr "Terminé&nbsp;! <strong>&laquo; %1$s &raquo;</strong> utilisateur(s) importé(s)."
+
+#: textpattern-importer.php:298
+msgid "No Users to Import!"
+msgstr "Aucun utilisateur à importer&nbsp;!"
+
+#: textpattern-importer.php:314
+msgid "Importing Posts..."
+msgstr "Importation des articles en cours&hellip;"
+
+#: textpattern-importer.php:388
+msgid "Done! <strong>%1$s</strong> posts imported."
+msgstr "Terminé&nbsp;! <strong>%1$s</strong> articles ont été importés."
+
+#: textpattern-importer.php:403
+msgid "Importing Comments..."
+msgstr "Importation des commentaires en cours&hellip;"
+
+#: textpattern-importer.php:446
+msgid "Done! <strong>%1$s</strong> comments imported."
+msgstr "Terminé&nbsp;! <strong>%1$s</strong> commentaires ont été importés."
+
+#: textpattern-importer.php:449
+msgid "No Comments to Import!"
+msgstr "Pas de commentaire à importer&nbsp;!"
+
+#: textpattern-importer.php:462
+msgid "Importing Links..."
+msgstr "Importation des liens en cours&hellip;"
+
+#: textpattern-importer.php:502
+msgid "No Links to Import!"
+msgstr "Aucun lien à importer&nbsp;!"
+
+#: textpattern-importer.php:517
+msgid "Import Users"
+msgstr "Importer des utilisateurs"
+
+#: textpattern-importer.php:530
+msgid "Import Posts"
+msgstr "Importer des articles"
+
+#: textpattern-importer.php:544
+msgid "Import Comments"
+msgstr "Importer des commentaires"
+
+#: textpattern-importer.php:556
+msgid "Import Links"
+msgstr "Importer des liens"
+
+#: textpattern-importer.php:569
+msgid "Finish"
+msgstr "Terminé"
+
+#: textpattern-importer.php:593
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: textpattern-importer.php:595
+msgid "Preserving Authors"
+msgstr "Conserver les auteurs"
+
+#: textpattern-importer.php:596
+msgid "Secondly, we have attempted to preserve post authors.  If you are the only author or contributor to your blog, then you are safe.  In most cases, we are successful in this preservation endeavor.  However, if we cannot ascertain the name of the writer due to discrepancies between database tables, we assign it to you, the administrative user."
+msgstr "Deuxièmement, nous nous sommes efforcés de conserver vos auteurs. Si vous êtes le seul auteur ou contributeur de votre blog, vous êtes tranquille. Dans la plupart des cas, nous parvenons à les conserver. Cependant, si nous ne sommes pas certains du nom de l&rsquo;auteur à cause des différences de gestion d&rsquo;une base de données à l&rsquo;autre, nous vous l&rsquo;affectons à vous, l&rsquo;administrateur."
+
+#: textpattern-importer.php:597
+msgid "Textile"
+msgstr "Textile"
+
+#: textpattern-importer.php:599
+msgid "WordPress Resources"
+msgstr "Ressources WordPress"
+
+#: textpattern-importer.php:600
+msgid "Finally, there are numerous WordPress resources around the internet.  Some of them are:"
+msgstr "Et enfin, il y a de nombreux sites dédiés à WordPress sur Internet. Parmi ceux-ci, nous vous indiquons&nbsp;:"
+
+#: textpattern-importer.php:603
+msgid "<a href=\"http://wordpress.org/support/\">The WordPress support forums</a>"
+msgstr "<a href=\"http://www.wordpress-fr.net/support/\">Forum WordPress d&rsquo;entraide en français</a>"
+
+#: textpattern-importer.php:606
+msgid "That&#8217;s it! What are you waiting for? Go <a href=\"%1$s\">log in</a>!"
+msgstr "Et voilà&nbsp;! Qu&rsquo;attendez-vous&nbsp;? Allez <a href=\"%1$s\">vous connecter</a>&nbsp;!"
+
+#: textpattern-importer.php:74
+msgid "Import Textpattern"
+msgstr "Importation depuis Textpattern"
+
+#: textpattern-importer.php:86
+msgid "This has not been tested on previous versions of Textpattern.  Mileage may vary."
+msgstr "Ceci n&rsquo;a pas été testé avec les versions précédentes de Textpattern. La peinture est encore fraîche&hellip;"
+
+#: textpattern-importer.php:87
+msgid "Your Textpattern Configuration settings are as follows:"
+msgstr "Vos options de configuration de Textpattern sont les suivantes&nbsp;:"
+
+#: textpattern-importer.php:498
+msgid "Done! <strong>%s</strong> link imported"
+msgid_plural "Done! <strong>%s</strong> links imported"
+msgstr[0] "Terminé&nbsp;! <strong>%1$s</strong> lien a été importé."
+msgstr[1] "Terminé&nbsp;! <strong>%1$s</strong> liens ont été importés."
+
+#: textpattern-importer.php:592
+msgid "Welcome to WordPress.  We hope (and expect!) that you will find this platform incredibly rewarding!  As a new WordPress user coming from Textpattern, there are some things that we would like to point out.  Hopefully, they will help your transition go as smoothly as possible."
+msgstr "Bienvenue sur WordPress. Nous espérons que vous trouverez cette plateforme incroyablement intéressante (et nous en sommes sûrs)&nbsp;! En tant que nouvel utilisateur de WordPress provenant de Textpattern, il y a quelques points que nous voudrions vous préciser. Nous espérons que cela vous aidera dans votre transition."
+
+#: textpattern-importer.php:594
+msgid "You have already setup WordPress and have been assigned an administrative login and password.  Forget it.  You didn&#8217;t have that login in Textpattern, why should you have it here?  Instead we have taken care to import all of your users into our system.  Unfortunately there is one downside.  Because both WordPress and Textpattern uses a strong encryption hash with passwords, it is impossible to decrypt it and we are forced to assign temporary passwords to all your users.  <strong>Every user has the same username, but their passwords are reset to password123.</strong>  So <a href=\"%1$s\">log in</a> and change it."
+msgstr "Vous avez déjà installé WordPress et il vous a été communiqué un identifiant d&rsquo;administration et un mot de passe. Oubliez-les. Vous n&rsquo;aviez pas cet identifiant dans Textpattern donc pourquoi l&rsquo;auriez-vous ici&nbsp;? Nous avons donc pris soin d&rsquo;importer tous vos utilisateurs dans votre système. Hélas, il y a un inconvénient. WordPress et Textpattern utilisent tous deux de fortes clefs d&rsquo;encryptage sur les mots de passe et il nous est impossible de les décrypter. Nous vous avons donc attribué un mot de passe temporaire. <strong>Tous les utilisateurs ont conservé leur identifiant, mais ils ont à présent un mot de passe commun qui est password123</strong>. Vous devez donc <a href=\"%1$s\">vous connecter</a> et changer cela."
+
+#: textpattern-importer.php:598
+msgid "Also, since you&#8217;re coming from Textpattern, you probably have been using Textile to format your comments and posts.  If this is the case, we recommend downloading and installing <a href=\"http://www.huddledmasses.org/category/development/wordpress/textile/\">Textile for WordPress</a>.  Trust me... You&#8217;ll want it."
+msgstr "Également, comme vous venez de Textpattern, vous avez probablement utilisé Textile pour formater vos commentaires et vos articles. Si c&rsquo;est le cas, nous vous recommandons de télécharger et installer <a href=\"http://www.huddledmasses.org/category/development/wordpress/textile/\">Textile pour WordPress</a>. Faites-moi confiance&hellip; Vous allez apprécier."
+
+#: textpattern-importer.php:612
+msgid "Textpattern Database User:"
+msgstr "Utilisateur de la base de données de Textpattern&nbsp;:"
+
+#: textpattern-importer.php:613
+msgid "Textpattern Database Password:"
+msgstr "Mot de passe de la base de données de Textpattern&nbsp;:"
+
+#: textpattern-importer.php:614
+msgid "Textpattern Database Name:"
+msgstr "Nom de la base de données de Textpattern&nbsp;:"
+
+#: textpattern-importer.php:615
+msgid "Textpattern Database Host:"
+msgstr "Domaine de la base de données de Textpattern&nbsp;:"
+
+#: textpattern-importer.php:616
+msgid "Textpattern Table prefix (if any):"
+msgstr "Préfixe (s&rsquo;il y a lieu) de la base de données de Textpattern&nbsp;:"
+
+#. Author of the plugin/theme
+msgid "wordpressdotorg"
+msgstr "wordpressdotorg"
+
+#: textpattern-importer.php:602
+msgid "<a href=\"http://wordpress.org/\">The official WordPress site</a>"
+msgstr "<a href=\"http://wordpress.org/\">Le site officiel de WordPress</a>"
+
+#. Plugin Name of the plugin/theme
+msgid "TextPattern Importer"
+msgstr "Importateur TextPattern"
+
+#: textpattern-importer.php:85
+msgid "Howdy! This imports categories, users, posts, comments, and links from any Textpattern 4.0.2+ into this site."
+msgstr "Salutations&nbsp;! Cette importateur permet de récupérer les catégories, utilisateurs, articles, commentaires et liens depuis un blog utilisant TextPattent 4.0.2+."
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/textpattern-importer/"
+msgstr "http://wordpress.org/extend/plugins/textpattern-importer/"
+
+#: textpattern-importer.php:604
+msgid "<a href=\"http://codex.wordpress.org/\">The Codex (In other words, the WordPress Bible)</a>"
+msgstr "<a href=\"http://codex.wordpress.org/\">Le Codex (la documentation de WordPress)</a>"
+
+#. #-#-#-#-#  tmp-textpattern-importer.pot (TextPattern Importer 0.2) 
+#. #-#-#-#-#
+#. Description of the plugin/theme
+#: textpattern-importer.php:707
+msgid "Import categories, users, posts, comments, and links from a TextPattern blog."
+msgstr "Importe les catégories, utilisateurs, articles, commentaires et liens depuis un blog TextPattern."
+
+#. Author URI of the plugin/theme
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: textpattern-importer.php:707
+msgid "TextPattern"
+msgstr "TextPattern"

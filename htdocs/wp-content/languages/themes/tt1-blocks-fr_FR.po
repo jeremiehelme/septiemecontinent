@@ -1,0 +1,229 @@
+# Translation of Themes - TT1 Blocks in French (France)
+# This file is distributed under the same license as the Themes - TT1 Blocks package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-30 17:13:14+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: fr\n"
+"Project-Id-Version: Themes - TT1 Blocks\n"
+
+#. Description of the theme
+msgid "TT1 Blocks is an experimental block-based version of the Twenty Twenty-One theme. It is built to leverage the full-site editing functionality that is being built in the Gutenberg plugin. This theme is not meant for use on a production site."
+msgstr "TT1 Blocks est une version expérimentale basée sur des blocs du thème Twenty Twenty-One. Il est conçu pour tirer parti de la fonctionnalité d’édition complète de site qui est en cours de création dans l’extension Gutenberg. Ce thème n’est pas destiné à être utilisé sur un site de production."
+
+#. Theme Name of the theme
+#: inc/block-patterns.php:19
+msgid "TT1 Blocks"
+msgstr "TT1 Blocks"
+
+#: inc/block-patterns.php:79
+msgid "Two Images Showcase"
+msgstr "Mise en avant de deux images"
+
+#: inc/block-patterns.php:47
+msgid "Instagram"
+msgstr "Instagram"
+
+#: inc/block-styles.php:61
+msgid "Dividers"
+msgstr "Séparateurs"
+
+#: inc/block-patterns.php:32
+msgid "Large Text"
+msgstr "Texte large"
+
+#: inc/block-styles.php:88
+msgid "Thick"
+msgstr "Épais"
+
+#: inc/block-styles.php:52
+msgid "Frame"
+msgstr "Cadre"
+
+#: inc/block-styles.php:34 inc/block-styles.php:43 inc/block-styles.php:70
+#: inc/block-styles.php:79
+msgid "Borders"
+msgstr "Bordures"
+
+#: inc/block-patterns.php:116
+msgid "123-456-7890"
+msgstr "123-456-7890"
+
+#: inc/block-patterns.php:113
+msgid "Contact Information"
+msgstr "Informations de contact"
+
+#: inc/block-patterns.php:106
+msgid "Reading"
+msgstr "Lecture"
+
+#: inc/block-patterns.php:106
+msgid "The Garden at Bougival"
+msgstr "Le Jardin de Bougival"
+
+#: inc/block-patterns.php:106
+msgid "In the Bois de Boulogne"
+msgstr "Dans le bois de Boulogne"
+
+#: inc/block-patterns.php:106
+msgid "Villa with Orange Trees, Nice"
+msgstr "Villa avec orangers, Nice"
+
+#: inc/block-patterns.php:106
+msgid "Roses Trémières"
+msgstr "Roses trémières"
+
+#: inc/block-patterns.php:105
+msgctxt "Block pattern description"
+msgid "A list of projects with thumbnail images."
+msgstr "Une liste de projets avec des miniatures d’images."
+
+#: inc/block-patterns.php:95
+msgid "Beautiful gardens painted by Berthe Morisot in the late 1800s"
+msgstr "Magnifiques jardins peints par Berthe Morisot à la fin des années 1800"
+
+#: inc/block-patterns.php:59
+msgid "Berthe Morisot<br>(French, 1841-1895)"
+msgstr "Berthe Morisot<br>(Française, 1841-1895)"
+
+#: inc/block-patterns.php:59
+msgid "Playing in the Sand"
+msgstr "Jouer dans le sable"
+
+#: inc/block-patterns.php:55
+msgid "Media and Text Article Title"
+msgstr "Titre d’article avec média et texte"
+
+#: inc/block-patterns.php:47 inc/block-patterns.php:116
+msgid "example@example.com"
+msgstr "exemple@example.com"
+
+#: inc/block-patterns.php:47
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: inc/block-patterns.php:47
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/block-patterns.php:46
+msgctxt "Block pattern description"
+msgid "A huge text followed by social networks and email address links."
+msgstr "Un énorme texte suivi de liens vers les réseaux sociaux et les adresses e-mail."
+
+#: inc/block-patterns.php:43
+msgid "Links Area"
+msgstr "Zone de liens"
+
+#: inc/block-patterns.php:35
+msgid "A new portfolio default theme for WordPress"
+msgstr "Un nouveau thème portfolio par défaut pour WordPress"
+
+#: inc/block-patterns.php:47
+msgid "Let&#8217;s Connect."
+msgstr "Gardons contact."
+
+#: inc/block-patterns.php:58
+msgctxt "Block pattern description"
+msgid "A Media & Text block with a big image on the left and a heading on the right. The heading is followed by a separator and a description paragraph."
+msgstr "Un bloc média & texte avec une grande image à gauche et un titre à droite. Le titre est suivi d’un séparateur et d’un paragraphe de description."
+
+#: inc/block-patterns.php:59
+msgid "&#8220;Playing in the Sand&#8221; by Berthe Morisot"
+msgstr "« Jeu dans le sable » par Berthe Morisot"
+
+#: inc/block-patterns.php:67
+msgid "Overlapping Images"
+msgstr "Images superposées"
+
+#: inc/block-patterns.php:70
+msgctxt "Block pattern description"
+msgid "Three images inside an overlapping columns block."
+msgstr "Trois images dans un bloc de colonnes superposées."
+
+#: inc/block-patterns.php:71 inc/block-patterns.php:106
+msgid "&#8220;Roses Trémières&#8221; by Berthe Morisot"
+msgstr "« Rose trémières » de Berthe Morisot"
+
+#: inc/block-patterns.php:71 inc/block-patterns.php:106
+msgid "&#8220;In the Bois de Boulogne&#8221; by Berthe Morisot"
+msgstr "« Dans le bois de Boulogne » de Berthe Morisot"
+
+#: inc/block-patterns.php:71 inc/block-patterns.php:106
+msgid "&#8220;Young Woman in Mauve&#8221; by Berthe Morisot"
+msgstr "« Jeune femme en mauve » de Berthe Morisot"
+
+#: inc/block-patterns.php:82
+msgctxt "Block pattern description"
+msgid "A Media & Text block with a big image on the left and a smaller one with bordered frame on the right."
+msgstr "Un bloc média & texte avec une grande image à gauche et une plus petite encadrée à droite."
+
+#: inc/block-patterns.php:83
+msgid "&#8220;Daffodils&#8221; by Berthe Morisot"
+msgstr "« Jonquilles » de Berthe Morisot"
+
+#: inc/block-patterns.php:83
+msgid "&#8220;Self portrait&#8221; by Berthe Morisot"
+msgstr "« Autoportrait » de Berthe Morisot"
+
+#: inc/block-patterns.php:91
+msgid "Overlapping Images and Text"
+msgstr "Images superposées et texte"
+
+#: inc/block-styles.php:25
+msgid "Overlap"
+msgstr "Superposition"
+
+#: inc/block-patterns.php:95 inc/block-patterns.php:106
+msgid "&#8220;The Garden at Bougival&#8221; by Berthe Morisot"
+msgstr "« Le jardin à Bougival » de Berthe Morisot"
+
+#: inc/block-patterns.php:95
+msgid "&#8220;Villa with Orange Trees, Nice&#8221; by Berthe Morisot"
+msgstr "« Villa dans les orangers, Nice » de Berthe Morisot"
+
+#: inc/block-patterns.php:103
+msgid "Portfolio List"
+msgstr "Liste de portfolio"
+
+#: inc/block-patterns.php:106
+msgid "Young Woman in Mauve"
+msgstr "Jeune femme en mauve"
+
+#: inc/block-patterns.php:106
+msgid "&#8220;Reading&#8221; by Berthe Morisot"
+msgstr "« La Lecture » de Berthe Morisot"
+
+#: inc/block-patterns.php:115
+msgctxt "Block pattern description"
+msgid "A block with 3 columns that display contact information and social media links."
+msgstr "Un bloc de 3 colonnes qui affiche les coordonnées des personnes à contacter et les liens vers les médias sociaux."
+
+#: inc/block-patterns.php:116
+msgid "123 Main Street"
+msgstr "123, rue de la République"
+
+#: inc/block-patterns.php:116
+msgid "Cambridge, MA, 02139"
+msgstr "13004 Arles"
+
+#: inc/block-patterns.php:94
+msgctxt "Block pattern description"
+msgid "An overlapping columns block with two images and a text description."
+msgstr "Un bloc de colonnes se superposant avec deux images et un texte de description."
+
+#. Author URI of the theme
+msgid "https://wordpress.org/"
+msgstr "https://fr.wordpress.org/"
+
+#. Author of the theme
+msgid "the WordPress team"
+msgstr "L’équipe WordPress"
+
+#. Theme URI of the theme
+msgid "https://github.com/WordPress/theme-experiments/tree/master/tt1-blocks"
+msgstr "https://github.com/WordPress/theme-experiments/tree/master/tt1-blocks"

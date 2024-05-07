@@ -1,0 +1,212 @@
+# Translation of Plugins - Press This - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - Press This - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-11-15 21:15:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - Press This - Stable (latest release)\n"
+
+#: press-this-plugin.php:69
+msgid "Open Press This"
+msgstr "Ouvrir Press This"
+
+#: press-this-plugin.php:61
+msgid "Press This is a little tool that lets you grab bits of the web and create new posts with ease."
+msgstr "Press This est un petit outil que vous permet de sélectionner des éléments d’une page web et d’en faire rapidement un article."
+
+#. #-#-#-#-#  press-this-code.pot (Press This 1.1.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: press-this-plugin.php:60 press-this-plugin.php:77
+msgid "Press This"
+msgstr "Press This"
+
+#: class-wp-press-this-plugin.php:1526
+msgid "Standard Editor"
+msgstr "Éditeur standard"
+
+#: class-wp-press-this-plugin.php:1518
+msgid "Saving&hellip;"
+msgstr "Enregistrement&hellip;"
+
+#: class-wp-press-this-plugin.php:1517
+msgid "Submit for Review"
+msgstr "Soumettre à relecture"
+
+#: class-wp-press-this-plugin.php:1475 class-wp-press-this-plugin.php:1486
+#: class-wp-press-this-plugin.php:1497
+msgid "Back to post options"
+msgstr "Retour aux options de l’article"
+
+#: class-wp-press-this-plugin.php:1408
+msgid "Suggested media"
+msgstr "Fichier média suggéré"
+
+#: class-wp-press-this-plugin.php:1403 class-wp-press-this-plugin.php:1404
+msgid "Post title"
+msgstr "Titre de l’article"
+
+#: class-wp-press-this-plugin.php:1381
+msgid "Scan"
+msgstr "Parcourir"
+
+#: class-wp-press-this-plugin.php:1380
+msgid "Enter a URL to scan"
+msgstr "Saisissez une adresse web à parcourir"
+
+#: class-wp-press-this-plugin.php:1379
+msgid "Scan site for content"
+msgstr "Parcourir un site en quête de contenu"
+
+#: class-wp-press-this-plugin.php:1373
+msgid "Hide post options"
+msgstr "Masquer les options de l’article"
+
+#: class-wp-press-this-plugin.php:1371
+msgid "Show post options"
+msgstr "Afficher les options de l’article"
+
+#: class-wp-press-this-plugin.php:900
+msgid "Search categories"
+msgstr "Rechercher dans les catégories"
+
+#: class-wp-press-this-plugin.php:873
+msgid "Toggle add category"
+msgstr "Ajouter ou non la catégorie"
+
+#: class-wp-press-this-plugin.php:261
+msgid "Error while adding the category. Please try again later."
+msgstr "Erreur lors de l’ajout de la catégorie. Veuillez réessayer plus tard."
+
+#: class-wp-press-this-plugin.php:254
+msgid "This category cannot be added. Please change the name and try again."
+msgstr "Cette catégorie ne peut pas être ajoutée. Veuillez changer son nom et réessayer."
+
+#: class-wp-press-this-plugin.php:236
+msgid "This category already exists."
+msgstr "Cette catégorie existe déjà."
+
+#: class-wp-press-this-plugin.php:102
+msgid "Missing post ID."
+msgstr "ID de l’article manquant."
+
+#. Author of the plugin/theme
+msgid "WordPress Contributors"
+msgstr "Contributeur WordPress"
+
+#. #-#-#-#-#  press-this-code.pot (Press This 1.1.1)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  press-this-code.pot (Press This 1.1.1)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://wordpress.org"
+msgstr "https://fr.wordpress.org"
+
+#: class-wp-press-this-plugin.php:1527
+msgid "Preview"
+msgstr "Aperçu"
+
+#: class-wp-press-this-plugin.php:1525
+msgid "Save Draft"
+msgstr "Enregistrer brouillon"
+
+#: class-wp-press-this-plugin.php:1517
+msgid "Publish"
+msgstr "Publier"
+
+#: class-wp-press-this-plugin.php:1509
+msgid "Add Media"
+msgstr "Ajouter un média"
+
+#: class-wp-press-this-plugin.php:1447 class-wp-press-this-plugin.php:1474
+msgctxt "post format"
+msgid "Format"
+msgstr "Format"
+
+#: class-wp-press-this-plugin.php:1372
+msgid "Done"
+msgstr "Terminé"
+
+#. translators: %d: nth image found in a post
+#: class-wp-press-this-plugin.php:1306
+msgid "Suggested image #%d"
+msgstr "Image suggérée #%d"
+
+#. translators: %d: nth embed found in a post
+#: class-wp-press-this-plugin.php:1304
+msgid "Suggested embed #%d"
+msgstr "Intégration suggérée #%d"
+
+#: class-wp-press-this-plugin.php:1300
+msgid "Title"
+msgstr "Titre"
+
+#: class-wp-press-this-plugin.php:936 class-wp-press-this-plugin.php:1464
+#: class-wp-press-this-plugin.php:1496
+msgid "Tags"
+msgstr "Étiquettes"
+
+#: class-wp-press-this-plugin.php:903 class-wp-press-this-plugin.php:1456
+#: class-wp-press-this-plugin.php:1485
+msgid "Categories"
+msgstr "Catégories"
+
+#: class-wp-press-this-plugin.php:891 class-wp-press-this-plugin.php:939
+msgid "Add"
+msgstr "Ajouter"
+
+#: class-wp-press-this-plugin.php:1264
+msgid "Press This!"
+msgstr "Press This!"
+
+#: class-wp-press-this-plugin.php:108
+msgid "Invalid post."
+msgstr "Article non valide."
+
+#. Description of the plugin/theme
+msgid "A little tool that lets you grab bits of the web and create new posts with ease."
+msgstr "Un petit outil que vous permet de sélectionner des éléments d’une page web et d’en faire rapidement un article."
+
+#: class-wp-press-this-plugin.php:832
+msgid "Post Formats"
+msgstr "Formats d’article"
+
+#: class-wp-press-this-plugin.php:898
+msgid "Search categories by name"
+msgstr "Rechercher dans les catégories par nom"
+
+#: class-wp-press-this-plugin.php:1145
+msgctxt "Used in Press This to indicate where the content comes from."
+msgid "Source:"
+msgstr "Source :"
+
+#: class-wp-press-this-plugin.php:1521
+msgid "More actions"
+msgstr "Plus d’actions"
+
+#: class-wp-press-this-plugin.php:283
+msgid "A valid URL was not provided."
+msgstr "L’URL fournie n’est pas valide."
+
+#: class-wp-press-this-plugin.php:1301
+msgid "Connection lost or the server is busy. Please try again later."
+msgstr "Connexion perdue ou le serveur est occupé. Veuillez réessayer ultérieurement."
+
+#: class-wp-press-this-plugin.php:1302
+msgid "The changes you made will be lost if you navigate away from this page."
+msgstr "Les modifications que vous avez effectuées seront perdues si vous quittez cette page."
+
+#: press-this-plugin.php:62
+msgid "It will even allow you to choose from images or videos included on the page and use them in your post."
+msgstr "Il vous permettra même de choisir parmi les images ou les vidéos incluses sur la page et de les utiliser dans votre article."
+
+#: press-this-plugin.php:63
+msgid "Use Press This as a quick and lightweight way to highlight another page on the web."
+msgstr "Utilisez Press This comme moyen rapide et léger de mettre en avant une autre page du Web."
+
+#: press-this-plugin.php:70
+msgid "then add it to your device&#8217;s bookmarks or home screen."
+msgstr "puis ajoutez-la aux signets ou à votre page d’accueil de votre appareil."

@@ -1,0 +1,282 @@
+# Translation of Plugins - WordPress Auto-updates - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - WordPress Auto-updates - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-05-18 21:38:05+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - WordPress Auto-updates - Stable (latest release)\n"
+
+#: functions.php:1396
+msgid "Auto-updates can be enabled and disabled on a theme by theme basis. Themes with auto-updates enabled will display the estimated date of the next auto-update. Auto-updates schedule depends on WordPress planned tasks."
+msgstr "Les mises à jour automatiques peuvent être activées et désactivées thème par thème. Les thèmes sur lesquels les mises à jour automatiques sont activées affichent une date estimée pour la prochaine mise à jour automatique. La planification des mises à jour automatiques dépend des tâches planifiées de WordPress."
+
+#: functions.php:1379
+msgid "Auto-updates can be enabled and disabled on a plugin by plugin basis. Plugins with auto-updates enabled will display the estimated date of the next auto-update. Auto-updates schedule depends on WordPress planned tasks."
+msgstr "Les mises à jour automatiques peuvent être activées et désactivées extension par extension. Les extensions sur lesquelles les mises à jour automatiques sont activées affichent une date estimée pour la prochaine mise à jour automatique. La planification des mises à jour automatiques dépend des tâches planifiées de WordPress."
+
+#: functions.php:1371 functions.php:1388 functions.php:1405
+msgid "Auto-updates"
+msgstr "Mises à jour auto"
+
+#: functions.php:1366 functions.php:1383 functions.php:1400
+msgid "For more information: <a href=\"%s\">Documentation about auto-updates</a>"
+msgstr "Pour plus d’information : <a href=\"%s\">Documentation sur les mises à jour automatiques</a>"
+
+#: functions.php:1363 functions.php:1380 functions.php:1397
+msgid "Please note: WordPress auto-updates may be overridden by third-parties plugins or custom code."
+msgstr "Veuillez noter : les mises à jour automatiques de WordPress peuvent être surchargées par des extensions tierces ou par du code personnalisé."
+
+#: functions.php:1362
+msgid "Plugins and Themes with auto-updates enabled will display the estimated date of the next auto-update. Auto-updates schedule depends on WordPress planned tasks."
+msgstr "Les extensions et les thèmes sur lesquels les mises à jour automatiques sont activées affichent une date estimée pour la prochaine mise à jour automatique. La planification des mises à jour automatiques dépend des tâches planifiées de WordPress."
+
+#: functions.php:1331
+msgid "Invalid data. The item does not exist."
+msgstr "Données non valides. L’élément n’existe pas."
+
+#. translators: %s: Number of themes.
+#: functions.php:607
+msgid "%s theme will no longer be auto-updated."
+msgid_plural "%s themes will no longer be auto-updated."
+msgstr[0] "Le thème %s ne sera plus mis à jour automatiquement."
+msgstr[1] "Les thèmes %s ne seront plus mis à jour automatiquement."
+
+#: functions.php:604 functions.php:618
+msgid "Theme will no longer be auto-updated."
+msgstr "Le thème ne sera plus mis à jour automatiquement."
+
+#. translators: %s: Number of themes.
+#: functions.php:598
+msgid "%s theme will be auto-updated."
+msgid_plural "%s themes will be auto-updated."
+msgstr[0] "Le thème %s sera mis à jour automatiquement."
+msgstr[1] "Les thèmes %s seront mis à jour automatiquement."
+
+#: functions.php:595 functions.php:614
+msgid "Theme will be auto-updated."
+msgstr "Le thème sera mis à jour automatiquement."
+
+#: functions.php:581
+msgid "Plugin will no longer be auto-updated."
+msgstr "L’extension ne sera plus mise à jour automatiquement."
+
+#: functions.php:579
+msgid "Plugin will be auto-updated."
+msgstr "L’extension sera mise à jour automatiquement."
+
+#: functions.php:441 functions.php:1255
+msgid "Sorry, you are not allowed to disable themes automatic updates."
+msgstr "Désolé, vous n’avez pas l’autorisation de désactiver les mises à jour automatiques des thèmes."
+
+#: functions.php:375
+msgid "Sorry, you are not allowed to disable plugins automatic updates."
+msgstr "Désolé, vous n’avez pas l’autorisation de désactiver les mises à jour automatiques des extensions."
+
+#: functions.php:319
+msgid "Disable Auto-updates"
+msgstr "Désactiver les mises à jour auto"
+
+#: functions.php:316
+msgid "Enable Auto-updates"
+msgstr "Activer les mises à jour auto"
+
+#: functions.php:1302 functions.php:1327
+msgid "Invalid data. Unknown type."
+msgstr "Données non valides. Type inconnu."
+
+#: functions.php:1297
+msgid "Invalid data. Unknown state."
+msgstr "Données non valides. État inconnu."
+
+#: functions.php:1291
+msgid "Invalid data. No selected item."
+msgstr "Données non valides. Aucun élément sélectionné."
+
+#: functions.php:123
+msgid "Enabling..."
+msgstr "Activation…"
+
+#: functions.php:126
+msgid "Disabling..."
+msgstr "Désactivation…"
+
+#: functions.php:1319
+msgid "You do not have permission to modify themes."
+msgstr "Vous n’avez pas les droits pour modifier les thèmes."
+
+#: functions.php:1309
+msgid "You do not have permission to modify plugins."
+msgstr "Vous n’avez pas les droits pour modifier les extensions."
+
+#: functions.php:128
+msgid "The request could not be completed."
+msgstr "La demande n’a pas pu être effectuée."
+
+#: functions.php:585
+msgid "Selected plugins will no longer be auto-updated."
+msgstr "Les extensions sélectionnées ne seront plus mises à jour automatiquement."
+
+#: functions.php:583
+msgid "Selected plugins will be auto-updated."
+msgstr "Les extensions sélectionnées seront mises à jour automatiquement."
+
+#: functions.php:1044
+msgid "The following themes were successfully updated:"
+msgstr "Les thèmes suivants ont bien été mis à jour :"
+
+#: functions.php:1024
+msgid "The following themes failed to update:"
+msgstr "Les mises à jour des thèmes suivants ont échoué :"
+
+#. translators: %s: Site title.
+#: functions.php:989
+msgid "[%s] Some plugins or themes have failed to update"
+msgstr "[%s] Certaines mises à jour de thèmes ou d’extensions ont échoué"
+
+#. translators: %s: Site title.
+#: functions.php:985 functions.php:1000
+msgid "[%s] Some plugins or themes were automatically updated"
+msgstr "[%s] Certains thèmes ou extensions ont été mis à jour automatiquement"
+
+#. translators: 1: Theme name. 2: Theme slug.
+#: functions.php:856
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#: functions.php:872 functions.php:885
+msgid "Auto-update"
+msgstr "Mise à jour auto"
+
+#: functions.php:868 functions.php:881
+msgid "Disabled"
+msgstr "Désactivées"
+
+#: functions.php:422 functions.php:445
+msgid "Please connect to your network admin to manage themes automatic updates."
+msgstr "Veuillez vous connecter à l’administration de votre réseau de sites pour gérer la mise à jour automatique des thèmes."
+
+#: functions.php:418 functions.php:1229
+msgid "Sorry, you are not allowed to enable themes automatic updates."
+msgstr "Désolé, vous n’avez pas l’autorisation d’activer les mises à jour automatiques de thèmes."
+
+#. translators: Duration that WP-Cron has been overdue.
+#: functions.php:1114
+msgid "There may be a problem with WP-Cron. Automatic update overdue by %s."
+msgstr "Il pourrait y avoir un problème avec le Cron WP. Mise à jour automatique ratée de %s."
+
+#: functions.php:1104
+msgid "WP-Cron is disabled. Automatic updates not available."
+msgstr "Le Cron WP est désactivé. Les mises à jour automatiques ne sont pas disponibles."
+
+#: functions.php:1098
+msgid "There may be a problem with WP-Cron. Automatic update not scheduled."
+msgstr "Il pourrait y avoir un problème avec le Cron WP. Mise à jour automatique non planifiée."
+
+#: functions.php:1056
+msgid "https://wordpress.org/support/forums/"
+msgstr "https://wpfr.net/support"
+
+#: functions.php:1055
+msgid "If you experience any issues or need support, the volunteers in the WordPress.org support forums may be able to help."
+msgstr "Si vous rencontrez des problèmes ou avez besoin de support, les bénévoles des forums de support WPFR.net seront en mesure de vous aider."
+
+#: functions.php:1034
+msgid "The following plugins were successfully updated:"
+msgstr "Les extensions suivantes ont bien été mises à jour :"
+
+#. translators: %s: Name of the related plugin.
+#: functions.php:1018 functions.php:1028 functions.php:1038 functions.php:1048
+msgid "- %s"
+msgstr "- %s"
+
+#: functions.php:1014
+msgid "The following plugins failed to update:"
+msgstr "La mise à jour des extensions suivantes a échouée :"
+
+#: functions.php:996 functions.php:1007
+msgid "Please check out your site now. It’s possible that everything is working. If it says you need to update, you should do so."
+msgstr "Veuillez vérifier votre site maintenant. Il est possible que tout fonctionne. Si une mise à jour est proposée, vous devriez la faire."
+
+#. translators: %s: Home URL.
+#: functions.php:992 functions.php:1003
+msgid "Howdy! Failures occurred when attempting to update plugins/themes on your site at %s."
+msgstr "Bonjour, des erreurs sont survenues lors de la tentative de mise à jour des thèmes/extensions de votre site accessible sur %s."
+
+#: functions.php:127 functions.php:814
+msgid "Auto-updates disabled"
+msgstr "Mises à jour auto désactivées"
+
+#. translators: %s: Number of plugins.
+#: functions.php:682
+msgid "Auto-updates Disabled <span class=\"count\">(%s)</span>"
+msgid_plural "Auto-updates Disabled <span class=\"count\">(%s)</span>"
+msgstr[0] "Mises à jour auto désactivées <span class=\"count\">(%s)</span>"
+msgstr[1] "Mises à jour auto désactivées <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of plugins.
+#: functions.php:672
+msgid "Auto-updates Enabled <span class=\"count\">(%s)</span>"
+msgid_plural "Auto-updates Enabled <span class=\"count\">(%s)</span>"
+msgstr[0] "Mises à jour auto activées <span class=\"count\">(%s)</span>"
+msgstr[1] "Mises à jour auto activées <span class=\"count\">(%s)</span>"
+
+#: functions.php:124 functions.php:813
+msgid "Auto-updates enabled"
+msgstr "Mises à jour auto activées"
+
+#: functions.php:866 functions.php:879
+msgid "Enabled"
+msgstr "Activées"
+
+#: functions.php:244 functions.php:1139
+msgid "Automatic updates"
+msgstr "Mises à jour automatiques"
+
+#: functions.php:352 functions.php:379 functions.php:482 functions.php:524
+msgid "Please connect to your network admin to manage plugins automatic updates."
+msgstr "Veuillez vous connecter à l’administration de votre réseau pour gérer les mises à jour automatiques des extensions."
+
+#: functions.php:348 functions.php:478 functions.php:520
+msgid "Sorry, you are not allowed to enable plugins automatic updates."
+msgstr "Désolé, vous n’avez pas l’autorisation d’activer les mises à jour automatiques des extensions."
+
+#: functions.php:55 functions.php:125 functions.php:277 functions.php:1173
+#: functions.php:1211
+msgid "Disable auto-updates"
+msgstr "Désactiver les mises à jour auto"
+
+#: functions.php:54 functions.php:122 functions.php:281 functions.php:1177
+#: functions.php:1210
+msgid "Enable auto-updates"
+msgstr "Activer les mises à jour auto"
+
+#. translators: Time until the next update.
+#: functions.php:1120
+msgid "Auto-update scheduled in %s."
+msgstr "Mise à jour auto planifiée dans %s."
+
+#. Author URI of the plugin
+msgid "https://wordpress.org"
+msgstr "https://wordpress.org"
+
+#. Author of the plugin
+#: functions.php:1057
+msgid "The WordPress Team"
+msgstr "L’équipe WordPress"
+
+#. Description of the plugin
+msgid "A feature plugin to integrate Plugins & Themes automatic updates in WordPress Core."
+msgstr "Une extension de fonctionnalités pour intégrer les mises à jour automatiques des extensions et des thèmes dans le cœur WordPress."
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/wp-autoupdates"
+msgstr "https://fr.wordpress.org/plugins/wp-autoupdates"
+
+#. Plugin Name of the plugin
+msgid "WordPress Auto-updates"
+msgstr "WordPress Auto-updates"
