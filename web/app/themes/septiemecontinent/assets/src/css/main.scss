@@ -129,6 +129,9 @@ select {
   padding: 40px var(--hspace) 75px;
   justify-content: center;
   margin: 0 auto;
+  background-image: url(../img/trame_white_reverse.png);
+  background-repeat: no-repeat;
+  background-position: top right;
 
   .layout-main {
     flex: 0 1 755px;
