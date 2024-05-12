@@ -110,6 +110,16 @@
             @include rhythm(16, 20);
             margin: 10px 0;
         }
+        &-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-top: 10px;
+            }
+        }
+
         @include respond-to('medium') {
             width: 100%;
             margin-top: 30px;
@@ -119,6 +129,10 @@
     }
     &[data-background="primary"] {
         background: var(--color-primary);
+
+        .c-link {
+            color: var(--color-secondary);       
+        }
     }
     &[data-background="secondary"],
     &[data-background="white"] {
@@ -135,7 +149,7 @@
         background: #cffff2;
     }
     &[data-background="white"] {
-        background: #fff;
+        background: url(../img/trame_white_reverse.png) no-repeat top right #fff;
     }
 
     @include respond-to(medium) {

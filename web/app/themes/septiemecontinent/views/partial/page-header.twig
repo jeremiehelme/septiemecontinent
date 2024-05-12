@@ -18,7 +18,18 @@
                     {{post.title}}
                 {% endif %}
             </h1>
+            
             {{post.page_header.texte}}
+
+            {% if post.page_header.links is not empty %}
+                <ul class="c-pageHeader-text-links">
+                    {% for item in post.page_header.links %}
+                        <li>
+                            <a href="{{item.link.url}}" class="c-link">{{item.link.title}}{{svg('arrow')}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div
     </div>
 </header>

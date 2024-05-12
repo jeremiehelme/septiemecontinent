@@ -17,7 +17,7 @@
 					{% include('blocks/' ~ block.acf_fc_layout ~ '.twig') with {fields: block} %}
 				{% endfor %}
 			{% else %}
-				{{post.content}}	
+				{{post.content}}
 			{% endif %}
 
 			{% if team is not empty %}

@@ -115,7 +115,11 @@
         background: #fff;
     }
     &[data-background='white_pattern'] {
-        background: #fff;
+        background: url(../img/trame_white.png) no-repeat top left #fff;
+
+        &[data-order='reverse'] {
+            background: url(../img/trame_white_reverse.png) no-repeat top right #fff;
+        }
     }
 
     // Image size
