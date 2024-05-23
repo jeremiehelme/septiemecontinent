@@ -2046,7 +2046,6 @@ h4, .h4 {
   background: #E4F1FA;
   background: var(--color-polar);
   padding-top: 40px;
-  padding-bottom: 70px;
 }
 @media (max-width: 767px) {
   .blog .postsList {
@@ -2058,6 +2057,11 @@ h4, .h4 {
   .single-post .layout-sidebar h3 {
     display: none;
   }
+}
+
+.blog .b-instagram, .single-post .b-instagram {
+  padding-top: 60px;
+  padding-bottom: 0;
 }
 
 @media (min-width: 993px) {

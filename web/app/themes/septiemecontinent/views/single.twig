@@ -14,3 +14,7 @@
 		</section>
 	</article>
 {% endblock %}
+
+{% block before_footer %}
+	{% include('blocks/instagram.twig') with {'fields':{'background':'white'}} %}
+{% endblock %}
